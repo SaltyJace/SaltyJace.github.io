@@ -108,7 +108,7 @@ section{
 .art{
     background-color: black;
     display: grid;
-    grid-template-columns: repeat(2, 2fr);
+    grid-template-areas: 2, 2;
     grid-gap: 1.5rem;
     align-items: center;
     color: var(--text-color);
@@ -129,4 +129,57 @@ height: auto;
 .art-text p{
     color: var(--main-color);
     font-weight: 100;
+}
+.experience{
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-gap: 1.5rem;
+    align-items: center;
+    color: var(--text-color);
+}
+.experience-img img{
+max-width: 100%;
+width: 480;
+height: auto;
+}
+.experience-text span{
+    color: var(--highlight-color);
+    font-weight: 600;
+}
+.experience-text h2{
+    color: var(--main-color);
+    font-weight: 400;
+}
+.experience-text p{
+    color: var(--main-color);
+    font-weight: 100;
+}
+.about{
+    background-color: black;
+    align-items: center;
+    color: var(--text-color);
+}
+.about-img img{
+float: left;
+margin: 5px;
+max-width: 10%;
+width: 200;
+height: 200;
+}
+.about-text span{
+    text-align: center;
+    color: var(--highlight-color);
+    font-weight: 600;
+}
+.about-text h2{
+    text-align: center;
+    color: var(--main-color);
+    font-weight: 400;
+}
+.about-text p{
+    text-align: justify;
+    color: var(--main-color);
+    font-weight: 100;
+
 }
