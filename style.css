@@ -209,9 +209,7 @@ section{
     justify-content: space-between;
 }
 .footer img{
-    z-index: 1000;
+    width: 3rem;
+    z-index: 1001;
     padding: 10px;
-    max-width: 10%;
-    width: 200;
-    height: 200;
 }
