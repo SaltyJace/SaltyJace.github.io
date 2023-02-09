@@ -114,9 +114,9 @@ section{
     color: var(--text-color);
 }
 .art-img img{
-max-width: 100%;
-width: 480;
-height: auto;
+    max-width: 100%;
+    width: 480;
+    height: auto;
 }
 .art-text span{
     color: var(--highlight-color);
@@ -139,9 +139,9 @@ height: auto;
     color: var(--text-color);
 }
 .experience-img img{
-max-width: 100%;
-width: 480;
-height: auto;
+    max-width: 100%;
+    width: 480;
+    height: auto;
 }
 .experience-text span{
     color: var(--highlight-color);
@@ -161,11 +161,11 @@ height: auto;
     color: var(--text-color);
 }
 .about-img img{
-float: left;
-margin: 5px;
-max-width: 10%;
-width: 200;
-height: 200;
+    float: left;
+    margin: 5px;
+    max-width: 10%;
+    width: 200;
+    height: 200;
 }
 .about-text span{
     text-align: center;
@@ -181,5 +181,37 @@ height: 200;
     text-align: justify;
     color: var(--main-color);
     font-weight: 100;
-
+}
+.footer{
+    position: relative;
+    z-index: 1000;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 41%;
+    background:#1e1c2b;
+}
+.footer-list{
+    display: flex;
+    justify-content: space-between;
+}
+.footer a{
+    z-index: 1000;
+    color:#8b83b6;
+    font-size: .7rem;
+    padding: 10px;
+    font-weight: 100;
+}
+.footer-imgs{
+    display: flex;
+    justify-content: space-between;
+}
+.footer img{
+    z-index: 1000;
+    padding: 10px;
+    max-width: 10%;
+    width: 200;
+    height: 200;
 }
