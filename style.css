@@ -8,7 +8,6 @@
     text-decoration: none;
     
 }
-
 :root{
     --main-color:#ffffff;
     --highlight-color:#ff2350;
@@ -117,7 +116,7 @@ section{
 .artbox{
     border-radius: 10px;
     background: #32323d;
-    padding: 100px;
+    padding: 2vw;
   }
 .art-img img{
     max-width: 100%;
@@ -140,16 +139,16 @@ section{
     font-weight: 200;
 }
 .experience{
+    color: var(--text-color);
+}
+.experiencebox{
     display: grid;
     grid-template-columns: repeat(2, 2fr);
     grid-gap: 1.5rem;
     align-items: center;
-    color: var(--text-color);
-}
-.experiencebox{
     border-radius: 10px;
     background: #32323d;
-    padding: 50px;
+    padding: 2vw;
 }
 .experience-img img{
     max-width: 100%;
@@ -180,6 +179,9 @@ section{
 .about{
     align-items: center;
     color: var(--text-color);
+    border-radius: 10px;
+    background: #32323d;
+    padding: .1vw;
 }
 .about-img img{
     float: left;
@@ -227,7 +229,7 @@ section{
 .footer a{
     z-index: 1000;
     color:#8b83b6;
-    font-size: .7vw;
+    font-size: 1vw;
     padding: 10px;
     font-weight: 400;
 }
@@ -236,7 +238,7 @@ section{
     justify-content: space-between;
 }
 .footer-imgs img{
-    width: 3rem;
+    width: 2.5vw;
     z-index: 1001;
     padding: 10px;
 }
