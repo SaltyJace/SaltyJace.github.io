@@ -43,23 +43,27 @@ header{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 30px 41%;
+    padding: 30px;
     background: transparent;
 }
-
 .name{
-    top: 10%;
+    width: 100%;
+    display: flex;
     position: fixed;
+    bottom: .2vw;
+    top: 20%;
     z-index: 250;
-    right: 25%;
-    left: 25%;
-    text-align: center;
+
+}
+.name h3{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
     font-family: 'Playfair Display', serif;
     color: var(--main-color);
     white-space: nowrap;
-    font-size: 10rem;
+    font-size: 5vw;
     font-weight: 500;
-    padding: 125px;
 }
 .mask{
     z-index: 300;
@@ -77,6 +81,8 @@ header{
 .navbar{
     z-index: 1000;
     display: flex;
+    margin-left: auto;
+    margin-right: auto;
 }
 .navbar a{
     z-index: 1000;
@@ -110,7 +116,7 @@ section{
 }
 .artbox{
     border-radius: 10px;
-    background: #353544;
+    background: #32323d;
     padding: 100px;
   }
 .art-img img{
@@ -142,7 +148,7 @@ section{
 }
 .experiencebox{
     border-radius: 10px;
-    background: #353544;
+    background: #32323d;
     padding: 50px;
 }
 .experience-img img{
