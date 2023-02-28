@@ -180,23 +180,17 @@ section{
 .about{
     color: var(--text-color);
 }
-.aboutbox {
+.aboutbox{
     display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    grid-gap: .5rem;
-    border: solid red 2px;
+    grid-template-columns: min-content 1fr;
+    grid-gap: 2rem;
     border-radius: 10px;
     background: #32323d;
     padding: 2vw;
 }
-.about-text{
-    border: solid red 2px;
-}
 .about-img img{
-    border: solid red 2px;
-    max-width: 100%;
-    width: 400;
-    height: 400;
+    width: 15vw;
+    height: auto;
 }
 .about-text h3{
     font-size: 1.5vw;
@@ -217,22 +211,23 @@ section{
     font-weight: 200;
 }
 .footer{
-    position: relative;
     z-index: 1000;
-    bottom: 0;
-    right: 0;
     width: 100%;
     justify-content: space-between;
-    padding: 30px 41%;
     background:#08080c;
+}
+.full-footer{
     display: grid;
-    grid-template-areas: 2, 2;
+    grid-template-areas: repeat(2, 2);
     grid-gap: 1.5rem;
-    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 .footer-list{
     display: flex;
     justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
 }
 .footer a{
     z-index: 1000;
@@ -244,9 +239,12 @@ section{
 .footer-imgs{
     display: flex;
     justify-content: space-between;
+    width: 20vw;
+        margin-left: auto;
+    margin-right: auto;
 }
 .footer-imgs img{
-    width: 2.5vw;
+    width: 2vw;
     z-index: 1001;
-    padding: 10px;
+    padding: 5x;
 }
