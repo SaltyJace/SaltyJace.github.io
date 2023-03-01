@@ -19,10 +19,30 @@
     body {
         background-color: var(--highlight-color);
     }
-    .artbox {
+    .art{
+        padding: 50px 4%;
         width: 100%;
         height: auto;
         margin: 0% 0%;
+        text-align: center;
+    }
+    .experience{
+        padding: 50px 4%;
+        width: 100%;
+        height: auto;
+        margin: 0% 0%;
+        text-align: center;
+    }
+    .experiencebox{
+        grid-template-columns: 1fr;
+    }
+    .about{
+        grid-template-columns: 1fr;
+        padding: 50px 4%;
+        width: 100%;
+        height: auto;
+        margin: 0% 0%;
+        text-align: center;
     }
 }
 :root{
