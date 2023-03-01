@@ -15,7 +15,7 @@
 @-ms-viewport{
     width: device-width;
 }
-@media screen and (max-width:800px){
+@media screen and (max-width:4000px){
     :root{
         --big-font:5rem;
         --h2-font:10vw;
