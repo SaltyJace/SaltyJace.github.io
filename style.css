@@ -8,6 +8,21 @@
     text-decoration: none;
     
 }
+:root{
+    --main-color:#ffffff;
+    --highlight-color:#ff2350;
+    --text-color:#fff;
+    --bg-color:#191824;
+    --trans-color:#1e1c2af3;
+    --big-font:5rem;
+    --h2-font:2vw;
+    --h3-font:1vw;
+    --p-font:1vw;
+}
+*::selection {
+    background: var(--highlight-color);
+    color:#fff;
+}
 @viewport{
     width: device-width;
     zoom: 1;
@@ -15,11 +30,11 @@
 @-ms-viewport{
     width: device-width;
 }
-@media screen and (max-width:4000px){
+@media screen and (max-width:800px){
     :root{
-        --big-font:5rem;
-        --h2-font:10vw;
-        --p-font:.9rem;
+        --h2-font:6vw;
+        --h3-font:3vw;
+        --p-font:3vw;
     }
     .art{
         padding: 50px 4%;
@@ -34,33 +49,23 @@
         height: auto;
         margin: 0% 0%;
         text-align: center;
-    }
-    .experiencebox{
         grid-template-columns: 1fr;
         order: 2;
     }
+    .experiencebox{
+        grid-template-columns: repeat(1, 1fr);
+        order: 2;
+    }
     .about{
-        grid-template-columns: 1fr;
         padding: 50px 4%;
         width: 100%;
         height: auto;
         margin: 0% 0%;
         text-align: center;
     }
-}
-:root{
-    --main-color:#ffffff;
-    --highlight-color:#ff2350;
-    --text-color:#fff;
-    --bg-color:#191824;
-    --trans-color:#1e1c2af3;
-    --big-font:5rem;
-    --h2-font:2vw;
-    --p-font:0.9rem;
-}
-*::selection {
-    background: var(--highlight-color);
-    color:#fff;
+    .aboutbox{
+        grid-template-rows: repeat(1fr, 1fr);
+    }
 }
 body{
     background-color: var(--bg-color);
@@ -103,7 +108,7 @@ header{
     color: var(--main-color);
     white-space: nowrap;
     font-size: 9vw;
-    font-weight: 500;
+    font-weight: 200;
 }
 .mask{
     z-index: 300;
@@ -167,17 +172,17 @@ section{
     height: auto;
 }
 .art-text span{
-    font-size: 1.5vw;
+    font-size: var(--h3-font);
     color: var(--highlight-color);
     font-weight: 600;
 }
 .art-text h2{
-    font-size: 2vw;
+    font-size: var(--h2-font);
     color: var(--main-color);
-    font-weight: 400;
+    font-weight: 300;
 }
 .art-text p{
-    font-size: 1.5vw;
+    font-size: var(--p-font);
     color: var(--main-color);
     font-weight: 200;
 }
@@ -199,7 +204,7 @@ section{
     height: auto;
 }
 .experience-text h3{
-    font-size: 1.5vw;
+    font-size: var(--h3-font);
     color: var(--highlight-color);
     font-weight: 600;
 }
@@ -210,12 +215,12 @@ section{
 }
 .experience-text li{
     list-style-type: circle;
-    font-size: 1vw;
+    font-size: var(--p-font);
     color: var(--main-color);
     font-weight: 200;
 }
 .experience-text p{
-    font-size: 1vw;
+    font-size: var(--p-font);
     color: var(--main-color);
     font-weight: 200;
 }
@@ -235,7 +240,7 @@ section{
     height: auto;
 }
 .about-text h3{
-    font-size: 1.5vw;
+    font-size: var(--h3-font);
     text-align: center;
     color: var(--highlight-color);
     font-weight: 600;
@@ -247,8 +252,8 @@ section{
     font-weight: 300;
 }
 .about-text p{
-    font-size: 1vw;
-    text-align: justify;
+    font-size: var(--p-font);
+    text-align: center;
     color: var(--main-color);
     font-weight: 200;
 }
