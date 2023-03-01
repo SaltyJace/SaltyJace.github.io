@@ -15,9 +15,11 @@
 @-ms-viewport{
     width: device-width;
 }
-@media screen and (max-width:620px){
-    body {
-        background-color: var(--highlight-color);
+@media screen and (max-width:800px){
+    :root{
+        --big-font:5rem;
+        --h2-font:10vw;
+        --p-font:.9rem;
     }
     .art{
         padding: 50px 4%;
@@ -35,6 +37,7 @@
     }
     .experiencebox{
         grid-template-columns: 1fr;
+        order: 2;
     }
     .about{
         grid-template-columns: 1fr;
@@ -52,7 +55,7 @@
     --bg-color:#191824;
     --trans-color:#1e1c2af3;
     --big-font:5rem;
-    --h2-font:2.25rem;
+    --h2-font:2vw;
     --p-font:0.9rem;
 }
 *::selection {
@@ -201,7 +204,7 @@ section{
     font-weight: 600;
 }
 .experience-text h2{
-    font-size: 2vw;
+    font-size: var(--h2-font);
     color: var(--main-color);
     font-weight: 300;
 }
@@ -238,7 +241,7 @@ section{
     font-weight: 600;
 }
 .about-text h2{
-    font-size: 2vw;
+    font-size: var(--h2-font);
     text-align: center;
     color: var(--main-color);
     font-weight: 300;
