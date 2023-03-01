@@ -30,7 +30,7 @@
 @-ms-viewport{
     width: device-width;
 }
-@media screen and (max-width:800px){
+@media screen and (max-width:4000px){
     :root{
         --h2-font:6vw;
         --h3-font:3vw;
