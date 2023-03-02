@@ -113,9 +113,10 @@ section{
     padding: 70px 17%;
 }
 .home{
-    display: none;
-    height: 0px;
-    width: 0px;
+    float: left;
+    height: 1px;
+    width: 1px;
+    background-color: #08080c;
 }
 .art{
     display: grid;
