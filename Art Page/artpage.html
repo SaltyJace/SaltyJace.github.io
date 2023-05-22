@@ -3,6 +3,13 @@
   <head>
     <title>Photo Gallery</title>
     <link rel="stylesheet" href="artstyle.css">
+    <script>
+        // When the user clicks on <div>, open the popup
+        function myFunction() {
+          var popup = document.getElementById("myPopup");
+          popup.classList.toggle("show");
+        }
+        </script>
   </head>
 
   <body>
@@ -10,6 +17,9 @@
 <div class="columns">
 
     <div class="container1">
+    <div class="popup" onclick="myFunction()">click me!
+        <span class="popuptext" id="myPopup">popup text...</span>
+    </div>
       <div class="tile">
             <img src="img/img6.jpg">
             <div class="text">
@@ -110,5 +120,10 @@
     </div>
 
 </div>
+
+<!----POP UP----->
+
+
+
   </body>
 </html>
