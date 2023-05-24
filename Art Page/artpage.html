@@ -10,14 +10,14 @@
 <div class="columns">
     <div class="container1">
         <div class="tile">
-            <img src="img/img3.jpg" onclick="openLightbox();toSlide(1);version(3)" class="hover-shadow preview" />
+            <img src="img/img3.jpg" onclick="version(3);openLightbox();toSlide(1)" class="hover-shadow preview" />
             <div class="text">
                 <h2>Hello</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
         </div> 
         <div class="tile">
-            <img src="img/img1.jpg" onclick="openLightbox();toSlide(1);version(1)" class="hover-shadow preview" />
+            <img src="img/img1.jpg" onclick="version(1);openLightbox();toSlide(1)" class="hover-shadow preview" />
             <div class="text">
                 <h2>Hello</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -115,7 +115,7 @@
     <span class="close pointer" onclick="closeLightbox()">&times;</span>
     <div class="modal-content">
         <div class="slide">
-            <img id="setImg" class="image-slide"/>
+            <img id='setImg' class="image-slide"/>
         </div>
         <div class="slide">
             <img id="setImg-2" class="image-slide"/>
@@ -158,15 +158,11 @@
 
 
 <script>
-
-
         function version(n) {
-          document.getElementById("setImg").src = `img/img${n}.jpg`;
-          document.getElementById("setImg-2").src = `img/img${n}-2.jpg`;
-          document.getElementById("setImg-3").src = `img/img${n}-3.jpg`;
+            document.getElementById('setImg').src = `img/img${n}.jpg`;
         };
 
-
+        setTimeout(20);
         // window.alert(setImg)
     // Initialize here and run showSlide() to give your lightbox a default state.
 
@@ -177,31 +173,27 @@
         // your previews, dots, controls and the close button.
         
         function openLightbox() {
-            setTimeout(20)
+            setTimeout(20);
           document.getElementById('Lightbox').style.display = 'block';
         }
         
         function closeLightbox() {
-            setTimeout(20)
           document.getElementById('Lightbox').style.display = 'none';
         };
         
         // Note that you are assigning new values here to our slidIndex.
         
         function changeSlide(n) {
-            setTimeout(20)
           showSlide(slideIndex += n);
         };
         
         function toSlide(n) {
-            setTimeout(20)
           showSlide(slideIndex = n);
         };
         // This is your logic for the light box. It will decide which slide to show 
         // and which dot is active.
         
         function showSlide(n) {
-            setTimeout(20)
           const slides = document.getElementsByClassName('slide');
           let modalPreviews = document.getElementsByClassName('modal-preview');
         
