@@ -118,23 +118,23 @@
             <img id='setImg' class="image-slide"/>
         </div>
         <div class="slide">
-            <img id="setImg-2" class="image-slide"/>
+            <img id='setImg' class="image-slide"/>
         </div>    
         <div class="slide">
-            <img id="setImg-3" class="image-slide"/>
+            <img id='setImg-3' class="image-slide"/>
         </div>
         <a class="previous" onclick="changeSlide(-1)">&#10094;</a>
         <a class="next" onclick="changeSlide(1)">&#10095;</a>
     
         <div class="dots">
         <div class="col">
-            <img id="setImg" onclick="toSlide(1)"/>
+            <img id='setImg' onclick="toSlide(1)"/>
         </div>
         <div class="col">
-            <img id="setImg-2" onclick="toSlide(2)"/>
+            <img id='setImg-2' onclick="toSlide(2)"/>
         </div>
         <div class="col">
-            <img id="setImg-3" onclick="toSlide(3)"/>
+            <img id='setImg-3' onclick="toSlide(3)"/>
         </div>
         </div>
     </div>
@@ -158,10 +158,13 @@
 
 
 <script>
+
+
         function version(n) {
             document.getElementById('setImg').src = `img/img${n}.jpg`;
+            document.getElementById('setImg-2').src = `img/img${n}-2.jpg`;
+            document.getElementById('setImg-2').src = `img/img${n}-3.jpg`;
         };
-
         setTimeout(20);
         // window.alert(setImg)
     // Initialize here and run showSlide() to give your lightbox a default state.
