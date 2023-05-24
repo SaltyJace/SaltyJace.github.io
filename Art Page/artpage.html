@@ -3,39 +3,28 @@
   <head>
     <title>Photo Gallery</title>
     <link rel="stylesheet" href="artstyle.css">
-    <script>
-        // When the user clicks on <div>, open the popup
-        function myFunction() {
-          var popup = document.getElementById("myPopup");
-          popup.classList.toggle("show");
-        }
-        </script>
   </head>
-
   <body>
 
+    
 <div class="columns">
-
     <div class="container1">
-    <div class="popup" onclick="myFunction()">click me!
-        <span class="popuptext" id="myPopup">popup text...</span>
-    </div>
-      <div class="tile">
-            <img src="img/img6.jpg">
+        <div class="tile">
+            <img src="img/img3.jpg" onclick="openLightbox();toSlide(1);version(3)" class="hover-shadow preview" />
             <div class="text">
                 <h2>Hello</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
         </div> 
         <div class="tile">
-            <img src="img/img2.jpg">
+            <img src="img/img1.jpg" onclick="openLightbox();toSlide(1);version(1)" class="hover-shadow preview" />
             <div class="text">
                 <h2>Hello</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
         </div> 
         <div class="tile">
-            <img src="img/img3.jpg">
+            <img src="img/img11.jpg">
             <div class="text">
                 <h2>Hello</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -121,9 +110,118 @@
 
 </div>
 
-<!----POP UP----->
-
-
-
-  </body>
+<div id="Lightbox" class="modal">
+    <div class="modal-grid">
+    <span class="close pointer" onclick="closeLightbox()">&times;</span>
+    <div class="modal-content">
+        <div class="slide">
+            <img id="setImg" class="image-slide"/>
+        </div>
+        <div class="slide">
+            <img id="setImg-2" class="image-slide"/>
+        </div>    
+        <div class="slide">
+            <img id="setImg-3" class="image-slide"/>
+        </div>
+        <a class="previous" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    
+        <div class="dots">
+        <div class="col">
+            <img id="setImg" onclick="toSlide(1)"/>
+        </div>
+        <div class="col">
+            <img id="setImg-2" onclick="toSlide(2)"/>
+        </div>
+        <div class="col">
+            <img id="setImg-3" onclick="toSlide(3)"/>
+        </div>
+        </div>
+    </div>
+    <div class="modal-description">
+        <h2>Lorem</h2>
+        <h3>Lorem Ipsum</h3>
+        <br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    </div>
+    </div>
+</div> 
+</body>
 </html>
+
+
+<!----lightbox script----->
+
+
+<script>
+
+
+        function version(n) {
+          document.getElementById("setImg").src = `img/img${n}.jpg`;
+          document.getElementById("setImg-2").src = `img/img${n}-2.jpg`;
+          document.getElementById("setImg-3").src = `img/img${n}-3.jpg`;
+        };
+
+
+        // window.alert(setImg)
+    // Initialize here and run showSlide() to give your lightbox a default state.
+
+        let slideIndex = 1;
+        showSlide(slideIndex);
+        
+        // You are providing the functionality for your clickable content, which is 
+        // your previews, dots, controls and the close button.
+        
+        function openLightbox() {
+            setTimeout(20)
+          document.getElementById('Lightbox').style.display = 'block';
+        }
+        
+        function closeLightbox() {
+            setTimeout(20)
+          document.getElementById('Lightbox').style.display = 'none';
+        };
+        
+        // Note that you are assigning new values here to our slidIndex.
+        
+        function changeSlide(n) {
+            setTimeout(20)
+          showSlide(slideIndex += n);
+        };
+        
+        function toSlide(n) {
+            setTimeout(20)
+          showSlide(slideIndex = n);
+        };
+        // This is your logic for the light box. It will decide which slide to show 
+        // and which dot is active.
+        
+        function showSlide(n) {
+            setTimeout(20)
+          const slides = document.getElementsByClassName('slide');
+          let modalPreviews = document.getElementsByClassName('modal-preview');
+        
+          if (n > slides.length) {
+            slideIndex = 1;	
+          };
+          
+          if (n < 1) {
+            slideIndex = slides.length;
+          };
+        
+          for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          };
+          
+          for (let i = 0; i < modalPreviews.length; i++) {
+            modalPreviews[i].className = modalPreviews[i].className.replace(' active', '');
+          };
+          
+          slides[slideIndex - 1].style.display = 'block';
+          modalPreviews[slideIndex - 1].className += ' active';
+        };
+        </script>
