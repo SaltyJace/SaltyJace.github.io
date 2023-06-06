@@ -115,6 +115,7 @@ body {
 }
 
 .tile {
+  cursor: pointer;
   box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
   height: -moz-max-content;
   height: max-content;
@@ -126,16 +127,19 @@ body {
   cursor: pointer;
 }
 .tile:hover .text {
+  cursor: pointer;
   bottom: 0;
 }
 .tile .text {
-  bottom: -40%;
+  cursor: pointer;
+  bottom: -100%;
   padding: 15px;
   position: absolute;
   color: #fff;
-  transition: 0.5s ease-in-out;
+  transition: 1s ease-in-out;
 }
 .tile .text .text h2 {
+  cursor: pointer;
   color: #fff;
   display: inline-block;
   font-weight: 300;
@@ -143,45 +147,9 @@ body {
   position: relative;
 }
 .tile .text .text p {
+  cursor: pointer;
   color: #fff;
   font-weight: 300;
-}
-
-.popup {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.popup .popuptext {
-  visibility: hidden;
-  width: 160px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -80px;
-}
-
-.popup .popuptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
-
-.popup .show {
-  visibility: visible;
-  animation: fadeIn 1s;
 }
 @keyframes fadeIn {
   from {
@@ -262,6 +230,10 @@ body {
      object-fit: cover;
 }
 
+.col img {
+  cursor: pointer;
+}
+
 img.active,
 .preview:hover,
 .modal-preview:hover {
@@ -317,6 +289,7 @@ img.hover-shadow {
 
 .previous:hover,
 .next:hover {
+  cursor: pointer;
   background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -325,12 +298,19 @@ img.hover-shadow {
   height: auto;
   margin: auto;
   display: grid;
-  grid-template-areas: repeat(1fr);
+}
+
+.modal-description-grid {
+  display: grid;
+  grid-template-rows: repeat(1fr);
+  height: 80vh;
+  outline: solid #a23562 1px;
 }
 
 .modal-description h2 {
   color: var(--main-color);
   font-size: var(--h2-font);
+  font-weight: 300;
 }
 
 .modal-description h3 {
@@ -341,4 +321,92 @@ img.hover-shadow {
 .modal-description p {
   color: var(--text-color);
   font-size: var(--p-font);
+  font-weight: 200;
+}
+
+.modal-description h5 {
+  color: var(--highlight-color);
+  font-size: 0.7vw;
+}
+
+.modal-description h4 {
+  text-align: right;
+  color: #8a87a7;
+  font-size: 0.5vw;
+  font-weight: 300;
+  float: right;
+}
+
+.sameline {
+  display: inline;
+}
+
+.madewith {
+  height: -moz-fit-content;
+  height: fit-content;
+  outline: solid #a23562 1px;
+}
+
+.madewith h5 {
+  margin-left: 1.1vw;
+  margin-bottom: 0;
+}
+
+.programs {
+  display: flex;
+  padding: 1vw;
+}
+
+.programs img {
+  display: flex;
+  justify-content: left;
+  height: 0.6vw;
+  width: 0.6vw;
+  max-width: 0.6vw;
+  max-height: 0.6vw;
+}
+
+.programs p {
+  display: flex;
+  font-weight: 300;
+  font-size: 0.5vw;
+  height: 0.5vw;
+  inline-size: block;
+}
+
+.Blender {
+  padding: 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+  margin: 0.25vw;
+}
+
+.Photoshop {
+  padding: 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+  margin: 0.25vw;
+}
+
+.Substance-Painter {
+  padding: 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+  margin: 0.25vw;
+}
+
+.imagedescription6 {
+  width: 50px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }/*# sourceMappingURL=artstyle.css.map */
