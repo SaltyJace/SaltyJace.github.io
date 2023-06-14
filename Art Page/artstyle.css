@@ -251,15 +251,15 @@ img.hover-shadow {
 .close {
   color: white;
   position: absolute;
-  top: 10px;
-  right: 25px;
-  font-size: 35px;
-  font-weight: bold;
+  top: 1.5vh;
+  right: 2.3vw;
+  font-size: 40px;
 }
 
 .close:hover,
 .close:focus {
-  color: #999;
+  transition: 0.2s;
+  color: var(--highlight-color);
   text-decoration: none;
   cursor: pointer;
 }
@@ -293,6 +293,10 @@ img.hover-shadow {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+.displaynono {
+  display: none;
+}
+
 .modal-description {
   width: 20vw;
   height: auto;
@@ -300,11 +304,14 @@ img.hover-shadow {
   display: grid;
 }
 
+.modal-text {
+  height: 60vh;
+}
+
 .modal-description-grid {
   display: grid;
   grid-template-rows: repeat(1fr);
   height: 80vh;
-  outline: solid #a23562 1px;
 }
 
 .modal-description h2 {
@@ -342,9 +349,8 @@ img.hover-shadow {
 }
 
 .madewith {
-  height: -moz-fit-content;
-  height: fit-content;
-  outline: solid #a23562 1px;
+  height: -moz-min-content;
+  height: min-content;
 }
 
 .madewith h5 {
@@ -402,11 +408,4 @@ img.hover-shadow {
   background-color: rgba(255, 255, 255, 0.15);
   border-radius: 3px;
   margin: 0.25vw;
-}
-
-.imagedescription6 {
-  width: 50px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }/*# sourceMappingURL=artstyle.css.map */

@@ -212,14 +212,14 @@ img.hover-shadow {
 .close {
   color: white;
   position: absolute;
-  top: 10px;
-  right: 25px;
-  font-size: 35px;
-  font-weight: bold;
+  top: 1.5vh;
+  right: 2.3vw;
+  font-size: 40px;
 }
 .close:hover,
 .close:focus {
-  color: #999;
+  transition: .2s;
+  color: var(--highlight-color);
   text-decoration: none;
   cursor: pointer;
 }
@@ -248,17 +248,22 @@ img.hover-shadow {
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.8);
 }
+.displaynono{
+  display: none;
+}
 .modal-description {
   width: 20vw;
   height: auto;
   margin: auto;
   display: grid;
 }
+.modal-text{
+  height: 60vh;
+}
 .modal-description-grid {
   display: grid;
   grid-template-rows: repeat(1fr);
   height: 80vh;
-  outline: solid #a23562 1px;
 }
 .modal-description h2 {
   color: var(--main-color);
@@ -289,8 +294,7 @@ img.hover-shadow {
   display: inline;
 }
 .madewith{
-  height: fit-content;
-  outline: solid #a23562 1px;
+  height:min-content;
 
 }
 .madewith h5{
