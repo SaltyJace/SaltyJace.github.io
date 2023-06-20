@@ -22,7 +22,7 @@
             <img src="img/render1.jpg" onclick="version(1);openLightbox();toSlide(1)" class="hover-shadow preview" />
             <div class="text" onclick="version(1);openLightbox();toSlide(1)">
                 <h2 id="imgtitle1">Deer in the Forest</h2>
-                <p id="imgdescription1">This render uses a small collection of trees and grass distributed accross a landscape with enough variation to still feel fresh. The deer, my hero asset, is just a simple plane with an image and warping to accentuate the lighting. The landscape is sculpted using blenders various brushes. All nature assets were sourced from polygoniq's <em>Botaniq</em> and distributed with their scatter system. After rendering, I used Adobe Photoshop to add a depth effect using a Z-index map</p>
+                <p id="imgdescription1" class="displaynono">This render uses a small collection of trees and grass distributed accross a landscape with enough variation to still feel fresh. The deer, my hero asset, is just a simple plane with an image and warping to accentuate the lighting. The landscape is sculpted using blenders various brushes. All nature assets were sourced from polygoniq's <em>Botaniq</em> and distributed with their scatter system. After rendering, I used Adobe Photoshop to add a depth effect using a Z-index map</p>
                 <h4 id="imgdate1" class="displaynono">May 2023</h4>
             </div>
         </div> 
@@ -131,6 +131,8 @@
 
 </div>
 
+<div id="Background" class="modalbg" onclick="closeLightbox()"></div>
+
 <div id="Lightbox" class="modal">
     <div class="modal-grid">
     <span class="close pointer" onclick="closeLightbox()">&times;</span>
@@ -144,18 +146,18 @@
         <div class="slide">
             <img id='setImg-3' class="image-slide"/>
         </div>
-        <a class="previous" onclick="changeSlide(-1)">&#10094;</a>
-        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        <a class="previous displaynono" onclick="changeSlide(-1)">&#10094;</a>  <!--Remove 'displaynono' to show right 'next image' arrow-->
+        <a class="next displaynono" onclick="changeSlide(1)">&#10095;</a>  <!--Remove 'displaynono' to show left 'next image' arrow-->
     
-        <div class="dots">
+    <div class="dots">
         <div class="col">
-            <img id='setPrev' class="modal-preview hover-shadow" onclick="toSlide(1)"/>
+            <img id='setPrev' class="modal-preview hover-shadow displaynono" onclick="toSlide(1)"/>  <!--Remove 'displaynono' to show preview image for next slides-->
         </div>
         <div class="col">
-            <img id='setPrev-2' class="modal-preview hover-shadow" onclick="toSlide(2)"/>
+            <img id='setPrev-2' class="modal-preview hover-shadow displaynono" onclick="toSlide(2)"/>  <!--Remove 'displaynono' to show preview image for next slides-->
         </div>
         <div class="col">
-            <img id='setPrev-3' class="modal-preview hover-shadow" onclick="toSlide(3)"/>
+            <img id='setPrev-3' class="modal-preview hover-shadow displaynono" onclick="toSlide(3)"/>  <!--Remove 'displaynono' to show preview image for next slides-->
         </div>
         </div>
     </div>
@@ -184,8 +186,7 @@
             </div>
         </div>
     </div>
-
-
+    
 
 </body>
 </html>
@@ -215,9 +216,11 @@
         showSlide(slideIndex);
         
         function openLightbox() {
+          document.getElementById('Background').style.display = 'flex';
           document.getElementById('Lightbox').style.display = 'block';
         };
         function closeLightbox() {
+          document.getElementById('Background').style.display = 'none';
           document.getElementById('Lightbox').style.display = 'none';
         };
         

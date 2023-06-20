@@ -18,6 +18,13 @@
   --h3-font:1vw;
   --p-font:.8vw;
 }
+@viewport{
+  width: device-width;
+  zoom: 1;
+}
+@-ms-viewport{
+  width: device-width;
+}
 body{
   background-color: var(--bg-color);
   width:100%;
@@ -40,7 +47,7 @@ body{
   grid-template-columns: repeat(1,1fr);
   grid-gap: 1vw;
   width: 29vw;
-  height: 5vw;
+  height: min-content;
 }
 .container1 img{
   width: 25vw;
@@ -53,7 +60,7 @@ body{
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 1vw;
   width: 29vw;
-  height: 5vw;
+  height: min-content;
 }
 .container2 img{
   width: 25vw;
@@ -66,7 +73,7 @@ body{
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 1vw;
   width: 29vw;
-  height: 5vw;
+  height: min-content;
 }
 .container3 img{
   width: 25vw;
@@ -136,17 +143,28 @@ body{
   from {opacity: 0;}
   to {opacity:1 ;}
 }
+.modalbg{
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  margin: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, .7);
+}
 .modal {
   display: none;
   position: fixed;
-  z-index: 1;
-  padding: 2vh 2vw 0vh 2vw;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  z-index: 2;
+  left: 1vw;
+  top: 2vh;
+  right: 2vw;
+  width: 96.75vw;
+  height: 92vh;
   overflow: auto;
-  background-color: rgba(0, 0, 0, .7);
+  outline: 1px solid purple;
 }
 .modal-grid{
   padding: .5vw;
@@ -154,6 +172,7 @@ body{
   grid-template-columns: 70vw 1fr;
   column-width: 10vw;
   background-color: rgb(36, 29, 50);
+  outline: 1px solid red;
 } 
 .modal-content {
   position: relative;
@@ -184,7 +203,7 @@ body{
 .modal-preview {
   width: 100%;
 }
-  .dots {
+.dots {
   display: grid;
   grid-template-columns: auto auto auto;
   column-gap: .5vw;
@@ -210,10 +229,11 @@ img.hover-shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 } 
 .close {
+  z-index: 3;
   color: white;
   position: absolute;
-  top: 1.5vh;
-  right: 2.3vw;
+  top: 0vh;
+  right: .7vw;
   font-size: 40px;
 }
 .close:hover,
@@ -295,7 +315,6 @@ img.hover-shadow {
 }
 .madewith{
   height:min-content;
-
 }
 .madewith h5{
   margin-left: 1.1vw;
@@ -343,4 +362,119 @@ img.hover-shadow {
   background-color: rgba(255, 255, 255, 0.15);
   border-radius: 3px;
   margin: .25vw;
+}
+@media screen and (max-width: 800px){
+  :root{
+      --h2-font:6vw;
+      --h3-font:3vw;
+      --p-font:3vw;
+  }
+  .columns{
+    margin: auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1vw;
+    width: 95vw;
+  }
+  .tile {
+    cursor : pointer;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
+    height:max-content;
+    overflow: hidden;
+    position: relative;
+    width: 95vw;
+    &:hover {
+        img {
+          cursor: pointer;
+        }
+        .text {
+          cursor : pointer;
+          bottom: 0;
+          }
+       }
+       .text {
+          cursor : pointer;
+          bottom: -100%;
+          padding: 15px;
+          position: absolute;
+          color: #fff;
+          transition: 1s ease-in-out;
+          .text  h2{
+            cursor : pointer;
+            color: #fff;
+            display: inline-block;
+            font-weight: 300;
+            margin-bottom: 5px;
+            position: relative;
+          }
+          .text p {
+            cursor : pointer;
+            color: #fff;
+            font-weight: 300;
+          }
+      }
+  }
+  .tile img{
+    width: 91vw;
+    height: auto;
+  }
+  .modal-grid{
+    padding: 3vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-width: 10vw;
+    background-color: rgb(36, 29, 50);
+  } 
+  .modal-description {
+    width: 82.5vw;
+    height: auto;
+    display: grid;
+  }
+  .modal-description-grid {
+    display: grid;
+    grid-template-rows: repeat(1fr);
+    width: 82.5vw;
+    height: auto;
+  }
+  .modal-text{
+    height: auto;
+  }
+  .dots img{
+    height: 7vh;
+    width: auto;
+    object-fit: cover;
+  }
+  .modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    padding: 0 0 0 0;
+    width: 85vw;
+    height: auto;
+    background-color: rgba(0, 0, 0, .4);
+  }
+  .madewith{
+    display: none;
+  }
+  .modal {
+    display: none;
+    z-index: 2;
+    left: 1.5vw;
+    right: 1.5vw;
+    width: 93.5vw;
+    height: auto;
+    justify-content: center;
+    overflow: auto auto;
+    outline: 1px solid purple;
+  }
+  .modal-description h4 {
+    font-size: 2vw;
+}
+.close {
+  top: -1vh;
+  right: 1.2vw;
+}
 }
