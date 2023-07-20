@@ -160,12 +160,15 @@ body {
   bottom: -100%;
   padding: 15px;
   position: absolute;
-  color: #fff;
+  color: black;
   transition: 1s ease-in-out;
+  filter: invert(1);
+  mix-blend-mode: difference;
+  mix-blend-mode: overlay #ff2350;
 }
 .tile .text .text h2 {
   cursor: pointer;
-  color: #fff;
+  color: black;
   display: inline-block;
   font-weight: 300;
   margin-bottom: 5px;
@@ -173,7 +176,7 @@ body {
 }
 .tile .text .text p {
   cursor: pointer;
-  color: #fff;
+  color: black;
   font-weight: 300;
 }
 @keyframes fadeIn {
