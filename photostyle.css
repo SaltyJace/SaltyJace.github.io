@@ -138,7 +138,15 @@ body {
   width: 100%;
   z-index: -1;
 }
-
+.stroke
+{
+    color: ff2350;
+    text-shadow:
+    -.5px -.5px 0 #000,
+    .5px -.5px 0 #000,
+    .51px .5px 0 #000,
+    .5px .5px 0 #000;  
+}
 .tile {
   cursor: pointer;
   box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
@@ -160,11 +168,9 @@ body {
   bottom: -100%;
   padding: 15px;
   position: absolute;
-  color: black;
+  color: #ff2350;
   transition: 1s ease-in-out;
-  filter: invert(1);
-  mix-blend-mode: difference;
-  mix-blend-mode: overlay #ff2350;
+  text-outline: 1px 1px black;
 }
 .tile .text .text h2 {
   cursor: pointer;
@@ -177,7 +183,7 @@ body {
 .tile .text .text p {
   cursor: pointer;
   color: black;
-  font-weight: 300;
+  font-weight: 400;
 }
 @keyframes fadeIn {
   from {
