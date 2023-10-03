@@ -132,7 +132,7 @@ section{
   }
 .art-img img{
     max-width: 100%;
-    width: 480;
+    width: 100%;
     height: auto;
 }
 .art-text span{
@@ -190,6 +190,38 @@ section{
     font-weight: 200;
 }
 .experience-text p{
+    font-size: var(--p-font);
+    color: var(--main-color);
+    font-weight: 200;
+}
+.art{
+    display: grid;
+    grid-template-areas: 2, 2;
+    grid-gap: 1.5rem;
+    align-items: center;
+    color: var(--text-color);
+}
+.videobox{
+    border-radius: 10px;
+    background: #32323d;
+    padding: 2vw;
+  }
+.video-img img{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+.video-text span{
+    font-size: var(--h3-font);
+    color: var(--highlight-color);
+    font-weight: 600;
+}
+.video-text h2{
+    font-size: var(--h2-font);
+    color: var(--main-color);
+    font-weight: 300;
+}
+.video-text p{
     font-size: var(--p-font);
     color: var(--main-color);
     font-weight: 200;
@@ -349,6 +381,7 @@ section{
         grid-row: 2;
         position: center;
     }
+    
     .footer a{
         z-index: 1000;
         color:#8b83b6;
