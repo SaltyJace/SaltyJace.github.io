@@ -338,6 +338,9 @@ section{
     .navbar a{
         padding: 6px;
     }
+    .navbar li {
+        font-size: 1rem;
+    }
     .art{
         padding: 50px 4%;
         width: 100%;
@@ -345,6 +348,12 @@ section{
         margin: 0% 0%;
         text-align: center;
     }
+    .video{
+        padding: 50px 4%;
+        width: 100%;
+        height: auto;
+        margin: 0% 0%;
+        text-align: center;
     .experience{
         padding: 50px 4%;
         width: 100%;
@@ -355,7 +364,7 @@ section{
     .experiencebox{
         text-align: center;
         position: center;
-        grid-template-areas: 2,2;
+        grid-template-areas: 1fr;
     }
     .experience img{
         grid-column: 1;
