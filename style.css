@@ -335,11 +335,15 @@ section{
         --h3-font:3vw;
         --p-font:3vw;
     }
-    .navbar a{
-        padding: 6px;
+    .navbar{
+        display: flex;
+        align-items: center;
+        margin-left: 0;
+        margin-right: 0;
     }
-    .navbar li {
-        font-size: 1rem;
+    .navbar a{
+        font-size: .9rem;
+        padding: 6px;
     }
     .art{
         padding: 50px 4%;
@@ -354,6 +358,7 @@ section{
         height: auto;
         margin: 0% 0%;
         text-align: center;
+    }
     .experience{
         padding: 50px 4%;
         width: 100%;

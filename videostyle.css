@@ -29,20 +29,41 @@ body{
     margin:0;
 }
 .videoproj{
+    width: 100vw;
     margin-top: 2%;
     color: #ff2350;
+    outline: #ff2350 1px solid;
     text-align: center;
 }
 .vidcolumn{
+    margin-top: 2%;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    width: 80%;
+    width: 100%;
     align-content: space-between;
-    margin: auto
+    margin-right: auto;
+    margin-left: auto;
+    grid-gap: 6px;
 }
 .player{
     align-content: center;
     display: flex;
     margin: auto;
-    padding: 6vw;
+    width: ;
+}
+@media screen and (max-width: 800px){
+    :root{
+        --h2-font:6vw;
+        --h3-font:3vw;
+        --p-font:3vw;
+    }
+    .vidcolumn{
+        margin-top: 2%;
+        width: 100%;
+    }
+    .player{
+        padding: 0vw;
+        width: 100%;
+        height: auto;
+    }
 }

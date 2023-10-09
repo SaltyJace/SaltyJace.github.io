@@ -444,9 +444,9 @@ img.hover-shadow {
     margin: auto;
     padding: 10px;
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     grid-gap: 1vw;
-    width: 95vw;
+    width: 99vw;
   }
   .tile {
     cursor: pointer;
