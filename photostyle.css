@@ -1,3 +1,4 @@
+
 * {
   padding: 0;
   margin: 0;
@@ -9,565 +10,188 @@
 }
 
 :root {
-  --main-color:#ffffff;
-  --highlight-color:#ff2350;
-  --text-color:#fff;
-  --bg-color:#191824;
-  --trans-color:#1e1c2af3;
-  --big-font:5rem;
-  --h2-font:2vw;
-  --h3-font:1vw;
-  --p-font:.8vw;
+  --main-color: #ffffff;
+  --highlight-color: #ff2350;
+  --text-color: #fff;
+  --bg-color: #191824;
+  --trans-color: #1e1c2af3;
+  --big-font: 5rem;
+  --h2-font: 2vw;
+  --h3-font: 1vw;
+  --p-font: .8vw;
 }
-
-@-o-viewport {
-  width: device-width;
-  zoom: 1;
-}
-
-@viewport {
-  width: device-width;
-  zoom: 1;
-}
+/* Basic reset for body margins and padding */
 body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
   background-color: var(--bg-color);
-  width: 100%;
-  margin: 0;
+  /* Example font */
 }
 
-*::-moz-selection {
-  background: var(--highlight-color);
-  color: #fff;
-}
-
-*::selection {
-  background: var(--highlight-color);
-  color: #fff;
-}
-.header{
-  text-align: center;
-  margin: auto;
-  display: flex;
-  padding: 20px;
-  top: 3vh;
-}
-.header h1 {
-  color: #ff2350;
-  text-align: center;
-  top: 3vh;
-  margin: auto;
-}
-
+/* Styling for the columns */
 .columns {
-  margin: auto;
-  padding: 10px;
-  display: grid;
-  grid-template-columns: repeat(3, 25vw);
-  grid-gap: 1vw;
-  width: 78vw;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  /* Spacing between product containers */
+  padding: 16px;
 }
 
-.container1 {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-gap: 1vw;
-  width: 29vw;
-  height: -moz-min-content;
-  height: min-content;
+/* Styling for each product container */
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  /* Spacing between product containers */
 }
 
-.container1 img {
-  width: 25vw;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
+.product-container {
+  padding: 8px;
+  border-radius: 8px;
+  /* Rounded corners for the product containers */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Light shadow for depth */
+  cursor: pointer;
+  /* Cursor pointer to indicate clickability */
+  transition: transform 0.3s ease;
+  /* Smooth transition for scaling */
 }
 
-.container2 {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-gap: 1vw;
-  width: 29vw;
-  height: -moz-min-content;
-  height: min-content;
+.product-container:hover {
+  transform: scale(1.05);
+  /* Slight scale up on hover for interactivity */
 }
-
-.container2 img {
-  width: 25vw;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
+.product-container img{
+  max-width: 500px;
+  max-height: 500px;
 }
-
-.container3 {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-gap: 1vw;
-  width: 29vw;
-  height: -moz-min-content;
-  height: min-content;
-}
-
-.container3 img {
-  width: 25vw;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
-}
-
-.tile img {
-  width: 25vw;
-  height: auto;
-}
-
-.tile-background {
-  background-size: cover;
-  background-position: center center;
-  bottom: 0;
-  filter: blur(50px);
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
+.product-image {
   width: 100%;
-  z-index: -1;
+  /* Force image to expand to container's width */
+  height: auto;
+  /* Keep image aspect ratio */
+  display: block;
 }
-.stroke
-{
-    color: ff2350;
-    text-shadow:
-    -.5px -.5px 0 #000,
-    .5px -.5px 0 #000,
-    .51px .5px 0 #000,
-    .5px .5px 0 #000;  
-}
-.tile {
-  cursor: pointer;
-  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
-  height: -moz-max-content;
-  height: max-content;
-  overflow: hidden;
-  position: relative;
-  width: 25vw;
-}
-.tile:hover img {
-  cursor: pointer;
-}
-.tile:hover .text {
-  cursor: pointer;
-  bottom: 0;
-}
-.tile .text {
-  cursor: pointer;
-  bottom: -100%;
-  padding: 15px;
-  position: absolute;
-  color: #ff2350;
-  transition: 1s ease-in-out;
-  text-outline: 1px 1px black;
-}
-.tile .text .text h2 {
-  cursor: pointer;
-  color: black;
-  display: inline-block;
-  font-weight: 300;
-  margin-bottom: 5px;
-  position: relative;
-}
-.tile .text .text p {
-  cursor: pointer;
-  color: black;
-  font-weight: 400;
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-.modalbg {
-  display: none;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  margin: 0;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
+/* Modal styles */
 .modal {
-  display: none;
-  position: fixed;
-  z-index: 2;
-  left: 1vw;
-  top: 2vh;
-  right: 2vw;
-  width: 96.75vw;
-  height: 92vh;
+  outline: 1px solid orange;
+  /* Fix position to the window */
+  z-index: 1;
+  /* Sit on top of other content */
+  top: 2.5vh;
+  bottom: 2.5vh;
+  /* Full width */
+  height: 95vh;
+  width: 95vh;
+  /* Full height */
   overflow: auto;
-}
-
-.modal-grid {
-  padding: 0.5vw;
-  display: grid;
-  grid-template-columns: 70vw 1fr;
-  -moz-column-width: 10vw;
-       column-width: 10vw;
-  background-color: rgb(36, 29, 50);
+  background-color: #2a2842;
+  /* Enable scroll if needed */
+  display: none;
+  align-items: center;
+  /* Center content vertically */
+  justify-content: center;
+  /* Center content horizontally */
+  position: fixed;
 }
 
 .modal-content {
+  background-color: #232133;
+  margin: auto;
+  padding: 20px;
+  width: 90%;
+  /* Width of the modal content */
+  max-width: 800px;
+  /* Maximum width */
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: auto;
-  padding: 0 0 0 0;
-  width: 70vw;
-  height: 90vh;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-.slide {
-  display: flex;
-  justify-content: center;
-  margin: auto;
-}
-
-.slide img {
-  cursor: default;
-  height: 80vh;
-  max-height: 80vh;
-  width: auto;
-  max-width: 80vw;
-}
-
-.image-slide {
-  width: 100%;
-}
-
-.modal-preview {
-  width: 100%;
-}
-
-.dots {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  -moz-column-gap: 0.5vw;
-       column-gap: 0.5vw;
-  margin: auto;
-}
-
-.dots img {
-  height: 15vh;
-  width: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.col img {
-  cursor: pointer;
-}
-
-img.active,
-.preview:hover,
-.modal-preview:hover {
-  opacity: 1;
-}
-
-img.hover-shadow {
-  transition: 0.3s;
-}
-
-.hover-shadow:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: block;
 }
 
 .close {
-  z-index: 3;
-  color: white;
+  z-index: 2;
+  color: rgb(219, 219, 219);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
   position: absolute;
-  top: 0vh;
-  right: 0.7vw;
-  font-size: 40px;
+  right: 10px;
+  top: 0;
 }
 
 .close:hover,
 .close:focus {
-  transition: 0.2s;
-  color: var(--highlight-color);
+  color: #ff2350;
   text-decoration: none;
   cursor: pointer;
 }
 
-.previous,
+#modal-slides img {
+  width: 100%;
+  height: auto;
+}
+
+/* Arrow buttons */
+.prev,
 .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
   width: auto;
   padding: 16px;
-  margin-top: -50px;
-  color: white;
+  margin-top: -30px;
+  /* Adjust this value to center the arrows */
+  color: black;
   font-weight: bold;
   font-size: 20px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
-  -moz-user-select: none;
-       user-select: none;
-  -webkit-user-select: none;
+  /* Rounded corners for the left arrow */
+  user-select: none;
+  /* Prevent text selection */
 }
 
 .next {
-  right: 0;
+  right: 20px;
   border-radius: 3px 0 0 3px;
+  /* Rounded corners for the right arrow */
 }
 
-.previous:hover,
+.prev:hover,
 .next:hover {
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: lightgrey;
 }
-
-.displaynono {
+.modalbg{
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
   display: none;
+  z-index: 0;
+  position: fixed;
 }
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
 
-.modal-description {
-  width: 20vw;
-  height: auto;
-  margin: auto;
-  display: grid;
-}
-
-.modal-text {
-  height: 60vh;
-}
-
-.modal-description-grid {
-  display: grid;
-  grid-template-rows: repeat(1fr);
-  height: 80vh;
-}
-
-.modal-description h2 {
-  color: var(--main-color);
-  font-size: var(--h2-font);
-  font-weight: 300;
-}
-
-.modal-description h3 {
-  color: var(--highlight-color);
-  font-size: var(--h3-font);
-}
-
-.modal-description p {
-  color: var(--text-color);
-  font-size: var(--p-font);
-  font-weight: 200;
-}
-
-.modal-description h5 {
-  color: var(--highlight-color);
-  font-size: 0.7vw;
-}
-
-.modal-description h4 {
-  text-align: right;
-  color: #8a87a7;
-  font-size: 0.5vw;
-  font-weight: 300;
-  float: right;
-}
-
-.sameline {
-  display: inline;
-}
-
-.madewith {
-  height: -moz-min-content;
-  height: min-content;
-}
-
-.madewith h5 {
-  margin-left: 1.1vw;
-  margin-bottom: 0;
-}
-
-.programs {
-  display: flex;
-  padding: 1vw;
-}
-
-.programs img {
-  display: flex;
-  justify-content: left;
-  height: 0.6vw;
-  width: 0.6vw;
-  max-width: 0.6vw;
-  max-height: 0.6vw;
-}
-
-.programs p {
-  display: flex;
-  font-weight: 300;
-  font-size: 0.5vw;
-  height: 0.5vw;
-  inline-size: block;
-}
-
-.Blender {
-  padding: 10px;
-  width: -moz-fit-content;
-  width: fit-content;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.15);
-  border-radius: 3px;
-  margin: 0.25vw;
-}
-
-.Photoshop {
-  padding: 10px;
-  width: -moz-fit-content;
-  width: fit-content;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.15);
-  border-radius: 3px;
-  margin: 0.25vw;
-}
-
-.Substance-Painter {
-  padding: 10px;
-  width: -moz-fit-content;
-  width: fit-content;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.15);
-  border-radius: 3px;
-  margin: 0.25vw;
-}
-
-@media screen and (max-width: 800px) {
-  :root {
-    --h2-font:6vw;
-    --h3-font:3vw;
-    --p-font:3vw;
+  .prev,
+  .next,
+  .close {
+    font-size: 18px;
   }
-  .columns {
-    margin: auto;
-    padding: 10px;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 1vw;
+  .modal{
+    top: 47.5vw;
+    height: 95vw;
     width: 95vw;
-  }
-  .tile {
-    cursor: pointer;
-    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
-    height: -moz-max-content;
-    height: max-content;
-    overflow: hidden;
-    position: relative;
-    width: 95vw;
-  }
-  .tile:hover img {
-    cursor: pointer;
-  }
-  .tile:hover .text {
-    cursor: pointer;
-    bottom: 0;
-  }
-  .tile .text {
-    cursor: pointer;
-    bottom: -100%;
-    padding: 15px;
-    position: absolute;
-    color: #fff;
-    transition: 1s ease-in-out;
-  }
-  .tile .text .text h2 {
-    cursor: pointer;
-    color: #fff;
-    display: inline-block;
-    font-weight: 300;
-    margin-bottom: 5px;
-    position: relative;
-  }
-  .tile .text .text p {
-    cursor: pointer;
-    color: #fff;
-    font-weight: 300;
-  }
-  .tile img {
-    width: 91vw;
-    height: auto;
-  }
-  .modal-grid {
-    padding: 3vw;
-    display: grid;
-    grid-template-columns: 1fr;
-    -moz-column-width: 10vw;
-         column-width: 10vw;
-    background-color: rgb(36, 29, 50);
-  }
-  .modal-description {
-    width: 82.5vw;
-    height: auto;
-    display: grid;
-  }
-  .modal-description-grid {
-    display: grid;
-    grid-template-rows: repeat(1fr);
-    width: 82.5vw;
-    height: auto;
-  }
-  .modal-text {
-    height: auto;
-  }
-  .dots img {
-    height: 7vh;
-    width: auto;
-    -o-object-fit: cover;
-       object-fit: cover;
   }
   .modal-content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto;
-    padding: 0 0 0 0;
-    width: 85vw;
-    height: auto;
-    background-color: rgba(0, 0, 0, 0.4);
+    width: 95%;
   }
-  .madewith {
-    display: none;
+  .close{
+    font-size: 40px;
   }
-  .modal {
-    display: none;
-    z-index: 2;
-    left: 1.5vw;
-    right: 1.5vw;
-    width: 93.5vw;
-    height: auto;
-    justify-content: center;
-    overflow: auto auto;
-  }
-  .modal-description h4 {
-    font-size: 2vw;
-  }
-  .close {
-    top: -1vh;
-    right: 1.2vw;
-  }
-}/*# sourceMappingURL=artstyle.css.map */
+}

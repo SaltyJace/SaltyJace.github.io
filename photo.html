@@ -1,303 +1,271 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>Photo</title>
-    <link rel="stylesheet" href="photostyle.css">
+    <link rel="stylesheet" href="photostyle.css"> <!-- Include external CSS file for styling -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"> <!-- Preconnect to Google Fonts and include Playfair Display font -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    </head>
-  </head>
-  <body>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet"> <!-- Preconnect to Google Fonts and include Montserrat font -->
+</head>
 
-<div class="header">
-    <h1>University of Utah RedZone Photography</h1>
-</div>
-    
-<div class="columns">
-    <div class="container1">
-        <div class="tile">
-            <img src="/img/product1.jpg" onclick="version(1);openLightbox();toSlide(1)" class="hover-shadow preview" />
-            <div class="text" onclick="version(1);openLightbox();toSlide(1)">
-                <h2 id="imgtitle1" class="stroke">Mom & Dad Pint Glasses</h2>
-                <p id="imgdescription1" class="stroke">   
-                    <b>•</b> Interlocking U and "Mom" on one glass Interlocking U and "Dad" on one glass<br>
-                    <b>•</b> Both glasses 16 oz.<br>
-                    <b>•</b> Imported
-                </p>
-                <h4 id="imgdate1" class="displaynono">May 2023</h4>
-            </div>
-        </div> 
-        <div class="tile">
-            <img src="img/product5.jpg" onclick="version(5);openLightbox();toSlide(1)" class="hover-shadow preview" />
-            <div class="text" onclick="version(5);openLightbox();toSlide(1)">
-                <h2 id="imgtitle5" class="stroke">Athletic Logo Piggy Bank</h2>
-                <p id="imgdescription5" class="stroke">                    
-                    <b>•</b> Off-white piggy bank with an Athletic Logo patterned design<br>
-                    <b>•</b> Imported</p>
-                <h4 id="imgdate5" class="displaynono">January 2023</h4>
-            </div>
-        </div> 
-        <div class="tile">
-            <img src="img/product8.jpg" onclick="version(8);openLightbox();toSlide(1)" class="hover-shadow preview" />
-            <div class="text" onclick="version(8);openLightbox();toSlide(1)">
-                <h2 id="imgtitle8" class="stroke">Infant Red and Black Utah Onesie</h2>
-                <p id="imgdescription8" class="stroke">                    
-                    <b>•</b> "UTAH" on front of onesie<br>
-                    <b>•</b> Black Kangaroo Pocket<br>
-                    <b>•</b> Imported</p>
-                    <h4 id="imgdate8" class="displaynono">January 2023</h4>
-            </div>
-        </div> 
-        <div class="tile">
-            <img src="img/product10.jpg" onclick="version(10);openLightbox();toSlide(1)" class="hover-shadow preview" />
-            <div class="text" onclick="version(10);openLightbox();toSlide(1)">
-                <h2 id="imgtitle10" class="stroke">Utah Utes Mini Bottle</h2>
-                <p id="imgdescription10" class="stroke">                    
-                    <b>•</b> "UTAH UTES" printed fornt and back<br>
-                    <b>•</b> Mini bottle<br>
-                    <b>•</b> Made in USA
-                </p>
-                <h4 id="imgdate10" class="displaynono">May 2023</h4>
-            </div>
-        </div> 
-    
-    </div>
-    <div class="container2">
-        <div class="tile">
-            <img src="img/product2.jpg" onclick="version(2);openLightbox();toSlide(1)" class="hover-shadow preview" />
-            <div class="text" onclick="version(2);openLightbox();toSlide(1)">
-                <h2 id="imgtitle2" class="stroke">Glass Stein with Red Panel</h2>
-                <p id="imgdescription2" class="stroke">                    
-                    <b>•</b> Glass Stein with a red panel<br>
-                    <b>•</b> "University of Utah" with Interlocking U on both sides<br>
-                    <b>•</b> 16 oz. Capacity
-                    <b>•</b> Imported</p>
-                </p>
-                <h4 id="imgdate2" class="displaynono">December 2022</h4>
-            </div>
-        </div> 
-        <div class="tile">
-            <img src="img/product4.jpg" onclick="version(4);openLightbox();toSlide(1)" class="hover-shadow preview" />
-            <div class="text" onclick="version(4);openLightbox();toSlide(1)">
-                <h2 id="imgtitle4" class="stroke">ZooZatz Sweatpants</h2>
-                <p id="imgdescription4" class="stroke">
-                    <b>•</b> Sweatpants with pockets<br>
-                    <b>•</b> Interlocking U logo<br>
-                    <b>•</b> 63% polyester 33% rayon 4% spandex<br>
-                    <b>•</b> Imported</p>
-                </p>
-                <h4 id="imgdate4" class="displaynono">June 2022</h4>
-            </div>
-        </div> 
+<body>
 
-        <div class="tile">
-            <img src="img/product9.jpg" onclick="version(9);openLightbox();toSlide(1)" class="hover-shadow preview" />
-            <div class="text" onclick="version(9);openLightbox();toSlide(1)">
-                <h2 id="imgtitle9" class="stroke">Interlocking U Black Lustre Shot Glass</h2>
-                <p id="imgdescription9" class="stroke">                    
-                    <b>•</b> Interlocking U printed in white<br>
-                    <b>•</b> Black and shiny lustre<br>
-                    <b>•</b> Standard 1.5 oz. size<br>
-                    <b>•</b> Imported</p></p>
-                <h4 id="imgdate9" class="displaynono">June 2022</h4>
-            </div>
-        </div> 
-       <div class="tile">
-            <img src="img/product12.jpg" onclick="version(12);openLightbox();toSlide(1)" class="hover-shadow preview" />
-            <div class="text" onclick="version(12);openLightbox();toSlide(1)">
-                <h2 id="imgtitle12" class="stroke">Infant Red Love Onesie</h2>
-                <p id="imgdescription12" class="stroke">  
-                <b>•</b> "Love" repeated 3 times on front of onesie<br>
-                <b>•</b> Athletic Logo featured at center of onesie<br>
-                <b>•</b> Made from 100% Cotton<br>
-                <b>•</b> Imported</p>
-                <h4 id="imgdate12" class="displaynono">September 2023</h4>
-            </div>
-        </div> 
-
+    <div class="header">
+        <h1>University of Utah RedZone Photography</h1> <!-- Page header -->
     </div>
 
-    <div class="container3">
-        <div class="tile">
-            <img src="img/product3.jpg" onclick="version(3);openLightbox();toSlide(1)" class="hover-shadow preview" />
-            <div class="text" onclick="version(3);openLightbox();toSlide(1)">
-                <h2 id="imgtitle3" class="stroke">Under Armour White Baseball Jersey</h2>
-                <p id="imgdescription3" class="stroke">                    
-                    <b>•</b> "Utah" Embroidered onto front of jersey<br>
-                    <b>•</b> Button up design<br>
-                    <b>•</b> Loose Fit<br>
-                    <b>•</b> 100% Polyester<br>
-                    <b>•</b> Imported
-                </p>
-                <h4 id="imgdate3" class="displaynono">March 2022</h4>
+    <div class="columns">
+        <div class="container">
+            <!-- Containers for Products 1 to 10 -->
+            <div class="product-container" data-product="product1">
+                <img src="img/products/product1/1.jpg" alt="Product 1" class="product-image" onclick="openModal(this)">
             </div>
-        </div> 
-        <div class="tile">
-            <img src="img/product6.jpg" onclick="version(6);openLightbox();toSlide(1)" class="hover-shadow preview" />
-            <div class="text" onclick="version(6);openLightbox();toSlide(1)">
-                <h2 id="imgtitle6" class="stroke">
-                    Utah Pride Heart Tee</h2>
-                <p id="imgdescription6" class="stroke">                    
-                    <b>•</b> Features rainbow heart with "UTAH"<br>
-                    <b>•</b> 55% Cotton | 45% Polyester<br>
-                    <b>•</b> Side seams<br>
-                    <b>•</b> Curved hem<br>
-                    <b>•</b> Relaxed fit</p>
-                <h4 id="imgdate6" class="displaynono">June 2023</h4>
+            <div class="product-container" data-product="product2">
+                <img src="img/products/product2/1.jpg" alt="Product 2" class="product-image" onclick="openModal(this)">
             </div>
-        </div> 
-        <div class="tile">
-            <img src="img/product7.jpg" onclick="version(7);openLightbox();toSlide(1)" class="hover-shadow preview" />
-            <div class="text" onclick="version(7);openLightbox();toSlide(1)">
-                <h2 id="imgtitle7" class="stroke">Women's Colosseum Utah Gymnastics Tee</h2>
-                <p id="imgdescription7" class="stroke">
-                    <b>•</b> Red stitching<br>
-                    <b>•</b> White sparkle detail<br>
-                    <b>•</b> Imported<br>
-                </p>
-                <h4 id="imgdate7" class="displaynono">August 2022</h4>
+            <div class="product-container" data-product="product3">
+                <img src="img/products/product3/1.jpg" alt="Product 3" class="product-image" onclick="openModal(this)">
             </div>
-        </div>
-       <div class="tile">
-            <img src="img/product11.jpg" onclick="version(11);openLightbox();toSlide(1)" class="hover-shadow preview" />
-            <div class="text" onclick="version(11);openLightbox();toSlide(1)">
-                <h2 id="imgtitle11">Athletic Logo Longsleeve</h2>
-                <p id="imgdescription11">
-                    <b>•</b> Red Atlhetic Logo on frot of shirt<br>
-                    <b>•</b> Ribbing along collar and sleeve cuffs<br>
-                    <b>•</b> 60% Cotton, 40% Polyester<br>
-                    <b>•</b> Imported</p></p>
-                <h4 id="imgdate11" class="displaynono">August 2023</h4>
+            <div class="product-container" data-product="product4">
+                <img src="img/products/product4/1.jpg" alt="Product 4" class="product-image" onclick="openModal(this)">
             </div>
-        </div> 
-        <!---
-        <div class="tile">
-            <img src="img/img9.jpg" onclick="version(9);openLightbox();toSlide(1)" class="hover-shadow preview" />
-            <div class="text" onclick="version(9);openLightbox();toSlide(1)">
-                <h2 id="imgtitle9">Hello</h2>
-                <p id="imgdescription9">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="product-container" data-product="product5">
+                <img src="img/products/product5/1.jpg" alt="Product 5" class="product-image" onclick="openModal(this)">
             </div>
-        </div> 
---->
-    </div>
-
-</div>
-
-<div id="Background" class="modalbg" onclick="closeLightbox()"></div>
-
-<div id="Lightbox" class="modal">
-    <div class="modal-grid">
-    <span class="close pointer" onclick="closeLightbox()">&times;</span>
-    <div class="modal-content">
-        <div class="slide">
-            <img id='setImg' class="image-slide"/>
-        </div>
-        <div class="slide">
-            <img id='setImg-2' class="image-slide"/>
-        </div>    
-        <div class="slide">
-            <img id='setImg-3' class="image-slide"/>
-        </div>
-        <a class="previous displaynono" onclick="changeSlide(-1)">&#10094;</a>  <!--Remove 'displaynono' to show right 'next image' arrow-->
-        <a class="next displaynono" onclick="changeSlide(1)">&#10095;</a>  <!--Remove 'displaynono' to show left 'next image' arrow-->
-    
-    <div class="dots">
-        <div class="col">
-            <img id='setPrev' class="modal-preview hover-shadow displaynono" onclick="toSlide(1)"/>  <!--Remove 'displaynono' to show preview image for next slides-->
-        </div>
-        <div class="col">
-            <img id='setPrev-2' class="modal-preview hover-shadow displaynono" onclick="toSlide(2)"/>  <!--Remove 'displaynono' to show preview image for next slides-->
-        </div>
-        <div class="col">
-            <img id='setPrev-3' class="modal-preview hover-shadow displaynono" onclick="toSlide(3)"/>  <!--Remove 'displaynono' to show preview image for next slides-->
-        </div>
-        </div>
-    </div>
-    <div class="modal-description">
-        <div class="modal-description-grid">
-            <div class="modal-text">
-                <h4 class="sameline" id="setDate"></h4>
-                <h2 id="setTitle" class="sameline"></h2>
-                <br>
-                <br>
-                <p id="setText"></p>
+            <div class="product-container" data-product="product6">
+                <img src="img/products/product6/1.jpg" alt="Product 6" class="product-image" onclick="openModal(this)">
+            </div>
+            <div class="product-container" data-product="product7">
+                <img src="img/products/product7/1.jpg" alt="Product 7" class="product-image" onclick="openModal(this)">
+            </div>
+            <div class="product-container" data-product="product8">
+                <img src="img/products/product8/1.jpg" alt="Product 8" class="product-image" onclick="openModal(this)">
+            </div>
+            <div class="product-container" data-product="product9">
+                <img src="img/products/product9/1.jpg" alt="Product 9" class="product-image" onclick="openModal(this)">
+            </div>
+            <div class="product-container" data-product="product10">
+                <img src="img/products/product10/1.jpg" alt="Product 10" class="product-image" onclick="openModal(this)">
+            </div>
+            <div class="product-container" data-product="product11">
+                <img src="img/products/product11/1.jpg" alt="Product 11" class="product-image" onclick="openModal(this)">
+            </div>
+            <div class="product-container" data-product="product12">
+                <img src="img/products/product12/1.jpg" alt="Product 12" class="product-image" onclick="openModal(this)">
+            </div>
+            <div class="product-container" data-product="product13">
+                <img src="img/products/product13/1.jpg" alt="Product 13" class="product-image" onclick="openModal(this)">
+            </div>
+            <div class="product-container" data-product="product14">
+                <img src="img/products/product14/1.jpg" alt="Product 14" class="product-image" onclick="openModal(this)">
+            </div>
+            <div class="product-container" data-product="product15">
+                <img src="img/products/product15/1.jpg" alt="Product 15" class="product-image" onclick="openModal(this)">
+            </div>
+            <div class="product-container" data-product="product16">
+                <img src="img/products/product16/1.jpg" alt="Product 16" class="product-image" onclick="openModal(this)">
+            </div>
+            <div class="product-container" data-product="product17">
+                <img src="img/products/product17/1.jpg" alt="Product 17" class="product-image" onclick="openModal(this)">
+            </div>
+            <div class="product-container" data-product="product18">
+                <img src="img/products/product18/1.jpg" alt="Product 18" class="product-image" onclick="openModal(this)">
+            </div>
+            <div class="product-container" data-product="product19">
+                <img src="img/products/product19/1.jpg" alt="Product 19" class="product-image" onclick="openModal(this)">
+            </div>
+            <div class="product-container" data-product="product20">
+                <img src="img/products/product20/1.jpg" alt="Product 20" class="product-image" onclick="openModal(this)">
+            </div>
+            <div class="product-container" data-product="product21">
+                <img src="img/products/product21/1.jpg" alt="Product 21" class="product-image" onclick="openModal(this)">
+            </div>
+            <div class="product-container" data-product="product22">
+                <img src="img/products/product22/1.jpg" alt="Product 22" class="product-image" onclick="openModal(this)">
+            </div>
+            <div class="product-container" data-product="product23">
+                <img src="img/products/product23/1.jpg" alt="Product 23" class="product-image" onclick="openModal(this)">
+            </div>
+            <div class="product-container" data-product="product24">
+                <img src="img/products/product24/1.jpg" alt="Product 24" class="product-image" onclick="openModal(this)">
+            </div>
+            <div class="product-container" data-product="product25">
+                <img src="img/products/product25/1.jpg" alt="Product 25" class="product-image" onclick="openModal(this)">
+            </div>
+            <div class="product-container" data-product="product26">
+                <img src="img/products/product26/1.jpg" alt="Product 26" class="product-image" onclick="openModal(this)">
+            </div>
+            <div class="product-container" data-product="product27">
+                <img src="img/products/product27/1.jpg" alt="Product 27" class="product-image" onclick="openModal(this)">
+            </div>
+            <div class="product-container" data-product="product28">
+                <img src="img/products/product28/1.jpg" alt="Product 28" class="product-image" onclick="openModal(this)">
+            </div>
+            <div class="product-container" data-product="product29">
+                <img src="img/products/product29/1.jpg" alt="Product 29" class="product-image" onclick="openModal(this)">
+            </div>
+            <div class="product-container" data-product="product30">
+                <img src="img/products/product30/1.jpg" alt="Product 30" class="product-image" onclick="openModal(this)">
             </div>
         </div>
     </div>
     
+
+        <!-- Modal Structure -->
+        <div id="modal" class="modal" style="display: none;"> <!-- Modal for displaying product images -->
+            <span class="close" onclick="closeModal()">&times;</span> <!-- Close button -->
+            <div class="modal-content">
+                <div id="modal-slides"></div> <!-- Container for product images -->
+                <a class="prev" onclick="changeSlide(-1)">&#10094;</a> <!-- Previous image button -->
+                <a class="next" onclick="changeSlide(1)">&#10095;</a> <!-- Next image button -->
+            </div>
+        </div>
+        <div id="Background" class="modalbg" onclick="closeModal()"></div> <!-- Background overlay for closing the modal --> 
+    </div>
+
+
+<!---
+    <div id="Lightbox" class="modal">
+        <div class="modal-grid">
+            <span class="close pointer" onclick="closeModal()">&times;</span>        Close button in lightbox view
+            <div class="modal-content">
+                <div class="slide">
+                    <img id='setImg' class="image-slide" />
+                </div>
+                <div class="slide">
+                    <img id='setImg-2' class="image-slide" />
+                </div>
+                <div class="slide">
+                    <img id='setImg-3' class="image-slide" />
+                </div>
+                <a class="previous " onclick="changeSlide(-1)">&#10094;</a>  
+                <a class="next " onclick="changeSlide(1)">&#10095;</a> 
+
+                <div class="dots">
+                    <div class="col">
+                        <img id='setPrev' class="modal-preview hover-shadow" onclick="changeSlide(1)" />
+                      
+                    </div>
+                    <div class="col">
+                        <img id='setPrev-2' class="modal-preview hover-shadow" onclick="changeSlide(2)" />
+                        
+                    </div>
+                    <div class="col">
+                        <img id='setPrev-3' class="modal-preview hover-shadow" onclick="changeSlide(3)" />
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="modal-description">
+                <div class="modal-description-grid">
+                    <div class="modal-text">
+                        <h4 class="sameline" id="setDate"></h4> 
+                        <h2 id="setTitle" class="sameline"></h2> 
+                        <br>
+                        <br>
+                        <p id="setText"></p>             Display image description
+                    </div>
+                </div>
+            </div>
+        </div>
+    -->
+    </div>
 
 </body>
-</html>
 
+</html>
 
 <!----lightbox script----->
 
-
 <script>
+    let currentProduct = ''; // Variable to store the current product being viewed
+    let currentSlideIndex = 0; // Variable to store the current slide index
+    let slides = []; // Array to store image URLs for the current product
 
-        let setImg = 'img/img11.jpg'
+    // Open modal with the clicked product's images
+    function openModal(imgElement) {
+        currentProduct = imgElement.closest('.product-container').dataset.product; // Get the product from the clicked image
+        currentSlideIndex = 0; // Start at the first image
+        displaySlides(currentProduct); // Display slides for the selected product
+        document.getElementById('modal').style.display = 'flex'; // Display the modal
+        document.getElementById('Background').style.display = 'flex'; // Display the background overlay
+    }
 
-        function version(n) {
-            document.getElementById('setImg').src = `img/product${n}.jpg`;
-            document.getElementById('setImg-2').src = `img/product${n}-2.jpg`;
-            document.getElementById('setImg-3').src = `img/product${n}-3.jpg`;
-            document.getElementById('setPrev').src = `img/product${n}.jpg`;
-            document.getElementById('setPrev-2').src = `img/product${n}-2.jpg`;
-            document.getElementById('setPrev-3').src = `img/product${n}-3.jpg`;
-            document.getElementById('setText').innerHTML = document.getElementById(`imgdescription${n}`).innerHTML;
-            document.getElementById('setTitle').innerHTML = document.getElementById(`imgtitle${n}`).innerHTML;
-            document.getElementById('setDate').innerHTML = document.getElementById(`imgdate${n}`).innerHTML;
-        };
-        setTimeout(20);
+    // Display all slides for a product
+    function displaySlides(product) {
+        const modalSlides = document.getElementById('modal-slides');
+        modalSlides.innerHTML = ''; // Clear existing slides
+        slides = getImagesForProduct(product); // Fetch all images for the product
+        slides.forEach((src, index) => {
+            let imgTag = document.createElement('img');
+            imgTag.src = src;
+            imgTag.onload = function () {
+                let slideDiv = document.createElement('div');
+                slideDiv.className = 'mySlides';
+                slideDiv.style.display = 'none'; // Hide the slide by default
+                slideDiv.appendChild(imgTag);
+                modalSlides.appendChild(slideDiv);
 
-        let slideIndex = 1;
-        showSlide(slideIndex);
-        
-        function openLightbox() {
-          document.getElementById('Background').style.display = 'flex';
-          document.getElementById('Lightbox').style.display = 'block';
-        };
-        function closeLightbox() {
-          document.getElementById('Background').style.display = 'none';
-          document.getElementById('Lightbox').style.display = 'none';
-        };
-        
-        function changeSlide(n) {
-          showSlide(slideIndex += n);
-        };
-        
-        function toSlide(n) {
-          showSlide(slideIndex = n);
-        };
-    
-        function showSlide(n) {
-          const slides = document.getElementsByClassName('slide');
-          const modalPreviews = document.getElementsByClassName('modal-preview');
-        
+                // If it's the first image, make it visible
+                if (modalSlides.querySelectorAll('.mySlides').length === 1) {
+                    slideDiv.style.display = 'block';
+                }
+            };
+            imgTag.onerror = function () {
+                console.error(`Failed to load image: ${src}`);
+                // Remove the image URL from the slides array if it fails to load
+                slides = slides.filter(slideSrc => slideSrc !== src);
+            };
+        });
+    }
 
-          if (n > slides.length) {
-            slideIndex = 1;	
-          };
-          
-          if (n < 1) {
-            slideIndex = slides.length;
-          };
-        
-          for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-          };
-          
-          for (let i = 0; i < modalPreviews.length; i++) {
-            modalPreviews[i].className = modalPreviews[i].className.replace(' active', '');
-          };
-          
-          slides[slideIndex - 1].style.display = 'block';
-          modalPreviews[slideIndex - 1].className += ' active';
-        };
-        </script>
+    // Fetch image URLs for a product
+    function getImagesForProduct(product) {
+        const images = [];
+        for (let i = 1; i <= 100; i++) {
+            images.push(`img/products/${product}/${i}.jpg`);
+        }
+        return images;
+    }
+
+    // Change slide (previous or next)
+    function changeSlide(n) {
+        let visibleSlides = document.querySelectorAll('.mySlides');
+
+        // Find the currently visible slide
+        let currentVisibleIndex = -1;
+        for (let i = 0; i < visibleSlides.length; i++) {
+            if (visibleSlides[i].style.display === 'block') {
+                currentVisibleIndex = i;
+                break;
+            }
+        }
+
+        // If no visible slide is found, exit the function
+        if (currentVisibleIndex === -1) return;
+
+        // Hide the current slide
+        visibleSlides[currentVisibleIndex].style.display = 'none';
+
+        // Determine the next slide's index, accounting for looping
+        let nextIndex = (currentVisibleIndex + n + visibleSlides.length) % visibleSlides.length;
+
+        // Show the next slide
+        visibleSlides[nextIndex].style.display = 'block';
+    }
+
+    // Close modal
+    function closeModal() {
+        document.getElementById('modal').style.display = 'none'; // Hide the modal
+        document.getElementById('Background').style.display = 'none'; // Hide the background
+    }
+</script>
