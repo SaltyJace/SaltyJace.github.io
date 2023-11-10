@@ -28,6 +28,15 @@ body {
   background-color: var(--bg-color);
   /* Example font */
 }
+h1 {
+  margin: auto;
+  padding: 20px;
+  color: #ff2350;
+  align-content: center;
+  justify-content: center;
+  width: fit-content;
+  
+}
 
 /* Styling for the columns */
 .columns {
@@ -77,12 +86,8 @@ body {
 }
 /* Modal styles */
 .modal {
-  outline: 1px solid orange;
-  /* Fix position to the window */
   z-index: 1;
   /* Sit on top of other content */
-  top: 2.5vh;
-  bottom: 2.5vh;
   /* Full width */
   height: 95vh;
   width: 95vh;
@@ -93,9 +98,14 @@ body {
   display: none;
   align-items: center;
   /* Center content vertically */
-  justify-content: center;
+  justify-content:end;
   /* Center content horizontally */
-  position: fixed;
+  position:fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 95vw;
+  max-height: 95vw;
 }
 
 .modal-content {
@@ -104,7 +114,6 @@ body {
   padding: 20px;
   width: 90%;
   /* Width of the modal content */
-  max-width: 800px;
   /* Maximum width */
   position: relative;
   display: block;
@@ -182,11 +191,6 @@ body {
   .next,
   .close {
     font-size: 18px;
-  }
-  .modal{
-    top: 47.5vw;
-    height: 95vw;
-    width: 95vw;
   }
   .modal-content {
     width: 95%;
