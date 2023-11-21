@@ -29,13 +29,13 @@ body {
   /* Example font */
 }
 h1 {
+  padding: 15px;
   margin: auto;
   padding: 20px;
   color: #ff2350;
   align-content: center;
   justify-content: center;
   width: fit-content;
-  
 }
 
 /* Styling for the columns */

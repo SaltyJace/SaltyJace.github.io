@@ -30,6 +30,15 @@
 @-ms-viewport{
   width: device-width;
 }
+h1 {
+  margin: auto;
+  padding: 20px;
+  color: #ff2350;
+  align-content: center;
+  justify-content: center;
+  width: fit-content;
+}
+
 body{
   background-color: var(--bg-color);
   width:100%;
