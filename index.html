@@ -33,8 +33,9 @@
             <li><a href="#experience">Experience</a></li>
             <li><a href="#about">About</a></li>
             <!----<li><a href="#contact">Contact</a></li>--->
-            
         </ul>
+        <float id="theme-toggle" class="btn btn-link btn-sm ml-2 small btnimg" type="button">
+        </float>
     </header>
     
     <!----------HOME START----------->
@@ -203,3 +204,24 @@
 </body>
 
 </html>
+
+<script>
+var toggle = document.getElementById("theme-toggle");
+
+var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+if (storedTheme)
+    document.documentElement.setAttribute('data-theme', storedTheme)
+
+
+toggle.onclick = function() {
+    var currentTheme = document.documentElement.getAttribute("data-theme");
+    var targetTheme = "light";
+
+    if (currentTheme === "light") {
+        targetTheme = "dark";
+    }
+
+    document.documentElement.setAttribute('data-theme', targetTheme)
+    localStorage.setItem('theme', targetTheme);
+};
+</script>
