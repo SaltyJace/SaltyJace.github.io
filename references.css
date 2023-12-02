@@ -29,6 +29,10 @@
     width: device-width;
     zoom: 1;
   }
+  .body{
+    margin-left: 10vw;
+
+  }
 .title{
   margin: auto;
   width: fit-content;

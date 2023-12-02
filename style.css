@@ -68,6 +68,7 @@ header{
     justify-content: space-between;
     padding: 30px;
     background: transparent;
+    transition: all .3s ease;
 }
 .name{
     width: 100%;
@@ -134,6 +135,9 @@ header{
     background-image: var(--button-img);
     width: 2.4vw;
     height: 2.4vw;
+}
+header.hide {
+	top: -100px;
 }
 section{
     padding: 70px 17%;
