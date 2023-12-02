@@ -133,11 +133,16 @@ header{
 .btnimg{
     background-size: 100%, 100%;
     background-image: var(--button-img);
-    width: 2.4vw;
-    height: 2.4vw;
+    width: 2.4rem;
+    height: 2.4rem;
+}
+.btn a:hover{
+    color: var(--highlight-color);
+    transition: .4s;
+    cursor: pointer;
 }
 header.hide {
-	top: -100px;
+	top: -110px;
 }
 section{
     padding: 70px 17%;

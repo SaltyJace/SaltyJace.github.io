@@ -256,4 +256,28 @@
           slides[slideIndex - 1].style.display = 'block';
           modalPreviews[slideIndex - 1].className += ' active';
         };
-        </script>
+
+        var toggle = document.getElementById("theme-toggle");
+
+var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+if (storedTheme)
+    document.documentElement.setAttribute('data-theme', storedTheme)
+
+
+    var header = document.querySelector("header");
+var navbarHeight = header.offsetHeight;
+var lastScrollTop = 0;
+
+window.onscroll = function() {scrollHide()};
+
+function scrollHide() {
+  var st = window.pageYOffset || document.documentElement.scrollTop;
+  console.log(st);
+  if (st > lastScrollTop) {
+    header.classList.add('hide');
+  } else {
+    header.classList.remove('hide');
+  }
+  lastScrollTop = st <= 0 ? 0 : st;
+}
+</script>

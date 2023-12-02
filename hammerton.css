@@ -8,17 +8,26 @@
   text-decoration: none;
   
 }
-:root{
+html[data-theme='light'] {
+  --main-color:#191824;
+  --highlight-color:rgb(0, 167, 22);
+  --text-color:#191824;
+  --bg-color:#FFFBFA;
+  --trans-color:#E6E3E8;
+  --parallax-img: url(/img/city-day-1.jpg);
+  --button-img: url(/img/moon.png);
+}
+
+html[data-theme='dark'] {
   --main-color:#ffffff;
   --highlight-color:#ff2350;
   --text-color:#fff;
   --bg-color:#191824;
-  --trans-color:#1e1c2af3;
-  --big-font:5rem;
-  --h2-font:2vw;
-  --h3-font:1vw;
-  --p-font:1vw;
+  --trans-color:#32323d;
+  --parallax-img: url(/img/city-night.png);
+  --button-img: url(/img/sun.png);
 }
+
 *::selection {
   background: var(--highlight-color);
   color:#fff;
@@ -33,7 +42,7 @@
 h1 {
   margin: auto;
   padding: 20px;
-  color: #ff2350;
+  color: var(--highlight-color);
   align-content: center;
   justify-content: center;
   width: fit-content;
@@ -136,7 +145,7 @@ section{
 }
 .artbox{
   border-radius: 10px;
-  background: #32323d;
+  background: var(--trans-color);
   padding: 2vw;
 }
 .art-img img{
@@ -161,7 +170,7 @@ section{
 }
 .artbutton {
   color: #ffffff;
-  background-color: #ff2350;
+  background-color: var(--highlight-color);
   width: fit-content;
   padding: 7px;
   border-radius: 7px;
@@ -178,7 +187,7 @@ section{
   grid-gap: 1.5rem;
   align-items: center;
   border-radius: 10px;
-  background: #32323d;
+  background: var(--trans-color);
   padding: 2vw;
 }
 .experience-img img{
@@ -247,7 +256,7 @@ section{
 }
 .videobutton {
   color: #ffffff;
-  background-color: #ff2350;
+  background-color: var(--highlight-color);
   width: fit-content;
   padding: 7px;
   border-radius: 7px;
@@ -263,7 +272,7 @@ section{
   grid-template-columns: min-content, 1fr;
   grid-gap: 1vw;
   border-radius: 10px;
-  background: #32323d;
+  background: var(--trans-color);
   padding: 2vw;
 }
 .about-img {

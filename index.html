@@ -206,6 +206,8 @@
 </html>
 
 <script>
+
+  //light mode and dark mode toggle
 var toggle = document.getElementById("theme-toggle");
 
 var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
@@ -223,8 +225,18 @@ toggle.onclick = function() {
 
     document.documentElement.setAttribute('data-theme', targetTheme)
     localStorage.setItem('theme', targetTheme);
+
+    checkbox.addEventListener( 'change', function() {
+         localStorage.setItem('light',this.checked);
+         if(this.checked) {
+              body.classList.add('light')
+         } else {
+              body.classList.remove('light')     
+         }
+    });
 };
 
+//header scroll down disapear
 
 var header = document.querySelector("header");
 var navbarHeight = header.offsetHeight;
@@ -242,4 +254,9 @@ function scrollHide() {
   }
   lastScrollTop = st <= 0 ? 0 : st;
 }
+
+function myFunction() {
+  document.getElementsByClassName('parallax').style.transition = "all 2s";
+}
+
 </script>

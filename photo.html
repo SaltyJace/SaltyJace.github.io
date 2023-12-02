@@ -19,6 +19,22 @@
 
 <body>
 
+    <header>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href=/index.html>Home</a></li>
+            <li><a href=/art.html>Art</a></li>
+            <li><a href=/photo.html>Photo</a></li>
+            <li><a href=/video.html>Video</a></li>
+            <li><a href=/index.html#experience>Experience</a></li>
+            <li><a href=/index.html#about>About</a></li>
+            <!----<li><a href="#contact">Contact</a></li>--->
+        </ul>
+        <float id="theme-toggle" class="btn btn-link btn-sm ml-2 small btnimg" type="button">
+        </float>
+    </header>
+
     <div class="header">
         <h1>University of Utah RedZone Photography</h1> <!-- Page header -->
     </div>
@@ -268,4 +284,55 @@
         document.getElementById('modal').style.display = 'none'; // Hide the modal
         document.getElementById('Background').style.display = 'none'; // Hide the background
     }
+
+  //light mode and dark mode toggle
+  var toggle = document.getElementById("theme-toggle");
+
+var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+if (storedTheme)
+    document.documentElement.setAttribute('data-theme', storedTheme)
+
+
+toggle.onclick = function() {
+    var currentTheme = document.documentElement.getAttribute("data-theme");
+    var targetTheme = "light";
+
+    if (currentTheme === "light") {
+        targetTheme = "dark";
+    }
+
+    document.documentElement.setAttribute('data-theme', targetTheme)
+    localStorage.setItem('theme', targetTheme);
+
+    checkbox.addEventListener( 'change', function() {
+         localStorage.setItem('light',this.checked);
+         if(this.checked) {
+              body.classList.add('light')
+         } else {
+              body.classList.remove('light')     
+         }
+    });
+
+};
+
+//header scroll down disapear
+
+var header = document.querySelector("header");
+var navbarHeight = header.offsetHeight;
+var lastScrollTop = 0;
+
+window.onscroll = function() {scrollHide()};
+
+function scrollHide() {
+  var st = window.pageYOffset || document.documentElement.scrollTop;
+  console.log(st);
+  if (st > lastScrollTop) {
+    header.classList.add('hide');
+  } else {
+    header.classList.remove('hide');
+  }
+  lastScrollTop = st <= 0 ? 0 : st;
+}
+
+
 </script>

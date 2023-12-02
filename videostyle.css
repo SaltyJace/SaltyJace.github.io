@@ -8,16 +8,24 @@
     text-decoration: none;
     
 }
-:root{
+html[data-theme='light'] {
+    --main-color:#191824;
+    --highlight-color:rgb(0, 167, 22);
+    --text-color:#191824;
+    --bg-color:#FFFBFA;
+    --trans-color:#E6E3E8;
+    --parallax-img: url(/img/city-day-1.jpg);
+    --button-img: url(/img/moon.png);
+}
+
+html[data-theme='dark'] {
     --main-color:#ffffff;
     --highlight-color:#ff2350;
     --text-color:#fff;
     --bg-color:#191824;
-    --trans-color:#1e1c2af3;
-    --big-font:5rem;
-    --h2-font:2vw;
-    --h3-font:1vw;
-    --p-font:1vw;
+    --trans-color:#32323d;
+    --parallax-img: url(/img/city-night.png);
+    --button-img: url(/img/sun.png);
 }
 *::selection {
     background: var(--highlight-color);

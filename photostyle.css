@@ -9,52 +9,106 @@
   text-decoration: none;
 }
 
-:root {
-  --main-color: #ffffff;
-  --highlight-color: #ff2350;
-  --text-color: #fff;
-  --bg-color: #191824;
-  --trans-color: #1e1c2af3;
-  --big-font: 5rem;
-  --h2-font: 2vw;
-  --h3-font: 1vw;
-  --p-font: .8vw;
+html[data-theme='light'] {
+  --main-color:#191824;
+  --highlight-color:rgb(0, 167, 22);
+  --text-color:#191824;
+  --bg-color:#FFFBFA;
+  --trans-color:#E6E3E8;
+  --parallax-img: url(/img/city-day-1.jpg);
+  --button-img: url(/img/moon.png);
+  --product-container:#ffffff;
 }
-/* Basic reset for body margins and padding */
+
+html[data-theme='dark'] {
+  --main-color:#ffffff;
+  --highlight-color:#ff2350;
+  --text-color:#fff;
+  --bg-color:#191824;
+  --trans-color:#32323d;
+  --parallax-img: url(/img/city-night.png);
+  --button-img: url(/img/sun.png);
+  --product-container:#ffffff;
+}
+header{
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  background: transparent;
+  transition: all .3s ease;
+}
+.navbar{
+  z-index: 1000;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+.navbar a{
+  z-index: 1000;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  padding: 10px;
+  font-weight: 500;
+}
+.navbar a:hover{
+  color: var(--highlight-color);
+  transition: .4s;
+}
+#menu-icon{
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
+.btn{
+  margin-top: .5%;
+  margin-right: .5%;
+  position:sticky;
+}
+.btnimg{
+  background-size: 100%, 100%;
+  background-image: var(--button-img);
+  width: 2.4rem;
+  height: 2.4rem;
+}
+header.hide {
+top: -110px;
+}
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
   background-color: var(--bg-color);
-  /* Example font */
+}
+.header{
+  margin-top: 5vh;
 }
 h1 {
   padding: 15px;
   margin: auto;
   padding: 20px;
-  color: #ff2350;
+  color: var(--highlight-color);
   align-content: center;
   justify-content: center;
   width: fit-content;
 }
-
-/* Styling for the columns */
 .columns {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 16px;
-  /* Spacing between product containers */
   padding: 16px;
 }
 
-/* Styling for each product container */
 .container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 16px;
-  /* Spacing between product containers */
 }
 
 .product-container {
@@ -67,6 +121,7 @@ h1 {
   /* Cursor pointer to indicate clickability */
   transition: transform 0.3s ease;
   /* Smooth transition for scaling */
+  background-color:var(--product-container);
 }
 
 .product-container:hover {
@@ -93,7 +148,7 @@ h1 {
   width: 95vh;
   /* Full height */
   overflow: auto;
-  background-color: #2a2842;
+  background-color: var(--trans-color);
   /* Enable scroll if needed */
   display: none;
   align-items: center;
@@ -109,7 +164,6 @@ h1 {
 }
 
 .modal-content {
-  background-color: #232133;
   margin: auto;
   padding: 20px;
   width: 90%;
