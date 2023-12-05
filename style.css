@@ -21,8 +21,9 @@ html[data-theme='light'] {
     --text-color:#191824;
     --bg-color:#FFFBFA;
     --trans-color:#E6E3E8;
-    --parallax-img: url(/img/city-day-1.jpg);
+    --parallax-img: url(/img/city-day-3.jpg);
     --button-img: url(/img/moon.png);
+    --hover-img: url(/img/moon2.png)
 }
 
 html[data-theme='dark'] {
@@ -33,6 +34,7 @@ html[data-theme='dark'] {
     --trans-color:#32323d;
     --parallax-img: url(/img/city-night.png);
     --button-img: url(/img/sun.png);
+    --hover-img: url(/img/sun2.png);
 }
 *::selection {
     background: var(--highlight-color);
@@ -44,6 +46,13 @@ html[data-theme='dark'] {
 }
 @-ms-viewport{
     width: device-width;
+}
+.btnimg:hover{
+    cursor: pointer;
+    scale: 105%;
+    transition: .4s ease-in;
+    transition: .4s ease-out;
+    background-image: var(--hover-img);
 }
 body{
     background-color: var(--bg-color);
