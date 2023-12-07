@@ -1,179 +1,201 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jace Carson Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
 
-    <link rel="stylesheet"     
-  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jace Carson Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  </head>
-  
-  <!-- Google tag (gtag.js) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+</head>
+
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WXGD7876G"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
   gtag('config', 'G-0WXGD7876G');
 </script>
-  
-  <body>
+
+<body>
 
 
-    <header>
-        <div class="bx bx-menu" id="menu-icon"></div>
+  <header>
 
-        <ul class="navbar">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#art">Art</a></li>
-            <li><a href="#photo">Photo</a></li>
-            <li><a href="#video">Video</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#about">About</a></li>
-            <!----<li><a href="#contact">Contact</a></li>--->
-        </ul>
-        <float id="theme-toggle" class="btn btn-link btn-sm ml-2 small btnimg" type="button">
-        </float>
-    </header>
-    
-    <!----------HOME START----------->
 
-    <section class="home" id="home">
-    </section>
+    <ul class="navbar">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#art">Art</a></li>
+      <li><a href="#photo">Photo</a></li>
+      <li><a href="#video">Video</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#about">About</a></li>
+      <!----<li><a href="#contact">Contact</a></li>--->
+    </ul>
+    <float id="theme-toggle" class="btn btn-link btn-sm ml-2 small btnimg" type="button">
+    </float>
+  </header>
 
-    <!----------NAME START----------->
+  <!----------HOME START----------->
 
-    <div class="parallax">
-      <div class="mask">
-        <section class="name" id="name">
-          <h3>Jace Carson</h3>
-        </section>
-        <div class="content-div"></div>
-      </div>
-    </div>
-
-<!----------art start---------->
-
-<section class="art" id="art">
-  <div class="artbox">
-  <div class="art-img">
-    <a href="./art.html"> <img src="img/forestrender.jpg"></a>
-  </div>
-  <div class="art-text">
-    <span href="./art.html">My Art</span>
-    <h2>Environment Art</h2>
-    <p>Here are some examples of my environment art and how it can be integreated easily into scenes.</p>
-      <br>
-      <div class="artbutton">
-        <a href="./art.html">More Art</a>
-      </div>
-  </div>
-  </div>
-</section>
-
-<!----------studio photo start----------->
-
-<section class="art" id="photo">
-  <div class="artbox">
-  <div class="art-img">
-    <a href="./photo.html"><img src="img/studiophotoheader.jpg"></a>
-  </div>
-  <div class="art-text">
-    <span href="./photo.html">My Photos</span>
-    <h2>Studio Photography</h2>
-    <p>Here is a showcase of some of my work done with the University of Utah Campus Store. These products were photographed, edited, and listed with the brand's style in mind. </p>
-    <br>  
-    <div class="artbutton">
-        <a href="./photo.html">More Photos</a>
-      </div>
-  </div>
-  </div>
-</section>
-
-<!-----start video------->
-
-<section class="video" id="video">
-  <div class="videobox">
-  <div class="video-img">
-    <a href="./video.html"><img src="img/VideoHeader.jpg"></a>
-  </div>
-  <div class="video-text">
-    <span href="./video.html">My Videos</span>
-    <h2>Video Production</h2>
-    <p>Here is a showcase of my work with 16mm film, using both super 16 and standard format.</p>
-    <br>
-      <div class="videobutton" id="./video">
-        <a href="./video.html">View Videos</a>
-      </div>
-  </div>
-  </div>
-</section>
-
-<!---------experience start------->
-
-<section class="experience" id="experience">
-  <div class="experiencebox">
-    <div class="experience-img">
-      <img src="img/Environment1.jpg">
-    </div>
-    <div class="experience-text">
-      <h3>My Experience</h3>
-      <br>
-      <h2>3D Experience</h2>
-      <p>For my 3d art workflow I use a mixture of Blender and Maya Autodesk to model assets.
-        To texture assets I use Adobe Photoshop and Adobe 3D Substance Painter.
-        For rendering, composition, and effects I use Unreal Engine 5.
-      </p>
-      <br>
-      <h2>Photo Experience</h2>
-      <p>Photography has always interested me as a hobby since 2013, since then I have developed skills in composition, camera skills, and photo editing.
-        Since then I have started my professional photography career with the University of Utah Campus Store.
-        With 2.5 years of profesional experience and around 10 years of photography under my belt; I am fully capable to lead a team or work completely independantly.
-        <br><br>
-      <h2>Video Experience</h2>
-      <p>I was first introduced to film in highschool and became very interested in video production and live broadcasting.
-         Since then I have graduated with a bachelors in Film and Media Arts at the University of Utah.
-         In my education I learned valuable film-making skills, as well as explored multiple mediums such as film, 3d, and digital video.
-  
-    </div>
-  </div>
+  <section class="home" id="home">
   </section>
 
-<!---------about start---------->
+  <!----------NAME START----------->
 
-<section class="about" id="about">
-  <div class="aboutbox">
-    <div class="about-img">
-      <img src="img/me.jpg">
-    </div>
-    <div class="about-text">
-      <h3>About Me</h3>
-      <h2>My Background</h2><br>
-      <p>I am a recent graduate from the University of Utah, having completed my studies in Film & Media Arts with a minor in Games during the spring of 2023. 
-        My primary focus lies in 3D modeling, with a specialization in environment art.
-         I possess a deep appreciation for challenging projects, constantly seeking opportunities to acquire new skills and master diverse programs.
-         Beyond my academic and professional pursuits, my interests are outdoor activities such as hiking and rock climbing.
-         Additionally, I am a film photography enthusiast, and consistently engage in personal 3D projects to further enhance my skills. 
-         I am currently seeking employment opportunities that align with my background and passion for 3D modeling, video editing, and photography.
-        </p>
+  <div class="parallax">
+    <div class="mask">
+      <section class="name" id="name">
+        <h3>Jace Carson</h3>
+      </section>
+      <div class="content-div"></div>
     </div>
   </div>
-</section>
+
+  <!----------art start---------->
+
+  <section class="art" id="art">
+    <div class="artbox">
+      <div class="art-img">
+        <a href="./art.html"> <img src="img/forestrender.jpg"></a>
+      </div>
+      <div class="art-text">
+        <span href="./art.html">My Art</span>
+        <h2>Environment Art</h2>
+        <p>Here are some examples of my environment art and how it can be integreated easily into scenes.</p>
+        <br>
+        <div class="morebutton">
+          More Art
+          <a href="./art.html">
+            <span class="btnlink"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!----------studio photo start----------->
+
+  <section class="art" id="photo">
+    <div class="artbox">
+      <div class="art-img">
+        <a href="./photo.html"><img src="img/studiophotoheader.jpg"></a>
+      </div>
+      <div class="art-text">
+        <span href="./photo.html">My Photos</span>
+        <h2>Studio Photography</h2>
+        <p>Here is a showcase of some of my work done with the University of Utah Campus Store. These products were
+          photographed, edited, and listed with the brand's style in mind. </p>
+        <br>
+        <div class="morebutton">
+          More Photos
+          <a href="./photo.html">
+            <span class="btnlink"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-----start video------->
+
+  <section class="video" id="video">
+    <div class="videobox">
+      <div class="video-img">
+        <a href="./video.html"><img src="img/VideoHeader.jpg"></a>
+      </div>
+      <div class="video-text">
+        <span href="./video.html">My Videos</span>
+        <h2>Video Production</h2>
+        <p>Here is a showcase of my work with 16mm film, using both super 16 and standard format.</p>
+        <br>
+        <div class="morebutton">
+          View Videos
+          <a href="./video.html">
+            <span class="btnlink"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!---------experience start------->
+
+  <section class="experience" id="experience">
+    <div class="experiencebox">
+      <div class="experience-img">
+        <img src="img/Environment1.jpg">
+      </div>
+      <div class="experience-text">
+        <h3>My Experience</h3>
+        <br>
+        <h2>3D Experience</h2>
+        <p>For my 3d art workflow I use a mixture of Blender and Maya Autodesk to model assets.
+          To texture assets I use Adobe Photoshop and Adobe 3D Substance Painter.
+          For rendering, composition, and effects I use Unreal Engine 5.
+        </p>
+        <br>
+        <h2>Photo Experience</h2>
+        <p>Photography has always interested me as a hobby since 2013, since then I have developed skills in
+          composition, camera skills, and photo editing.
+          Since then I have started my professional photography career with the University of Utah Campus Store.
+          With 2.5 years of profesional experience and around 10 years of photography under my belt; I am fully capable
+          to lead a team or work completely independantly.
+          <br><br>
+        <h2>Video Experience</h2>
+        <p>I was first introduced to film in highschool and became very interested in video production and live
+          broadcasting.
+          Since then I have graduated with a bachelors in Film and Media Arts at the University of Utah.
+          In my education I learned valuable film-making skills, as well as explored multiple mediums such as film, 3d,
+          and digital video.
+
+      </div>
+    </div>
+  </section>
+
+  <!---------about start---------->
+
+  <section class="about" id="about">
+    <div class="aboutbox">
+      <div class="about-img">
+        <img src="img/me.jpg">
+      </div>
+      <div class="about-text">
+        <h3>About Me</h3>
+        <h2>My Background</h2><br>
+        <p>I am a recent graduate from the University of Utah, having completed my studies in Film & Media Arts with a
+          minor in Games during the spring of 2023.
+          My primary focus lies in 3D modeling, with a specialization in environment art.
+          I possess a deep appreciation for challenging projects, constantly seeking opportunities to acquire new skills
+          and master diverse programs.
+          Beyond my academic and professional pursuits, my interests are outdoor activities such as hiking and rock
+          climbing.
+          Additionally, I am a film photography enthusiast, and consistently engage in personal 3D projects to further
+          enhance my skills.
+          I am currently seeking employment opportunities that align with my background and passion for 3D modeling,
+          video editing, and photography.
+        </p>
+      </div>
+    </div>
+  </section>
 
 
-<!-------contact start------------>
-<!-----
+  <!-------contact start------------>
+  <!-----
 <section class="contact" id="contact">
   <div class="contactbox">
     <div class="contactfill">
@@ -188,27 +210,27 @@
 
 </section>
 --->
-<!-------footer start------------->
+  <!-------footer start------------->
 
-<section class="footer" id="footer">
-  <div class="full-footer">
-    <div class="footer-list">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#art">Art</a></li>
-      <li><a href="#photo">Photo</a></li>
-      <li><a href="#video">Video</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#about">About</a></li>
-      <!----<li><a href="#contact">Contact</a></li>--->
+  <section class="footer" id="footer">
+    <div class="full-footer">
+      <div class="footer-list">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#art">Art</a></li>
+        <li><a href="#photo">Photo</a></li>
+        <li><a href="#video">Video</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#about">About</a></li>
+        <!----<li><a href="#contact">Contact</a></li>--->
+      </div>
+      <div class="footer-imgs">
+        <a href="https://www.artstation.com/jacecarson" target="_blank"><img src="img/artstation.png"></a>
+        <a href="https://www.instagram.com/saltyyace" target="_blank"><img src="img/instagram2.png"></a>
+        <a href="https://www.twitter.com/Salty_Jace" target="_blank"><img src="img/twitter.png"></a>
+        <a href="https://www.discordapp.com/users/jacecarson" target="_blank"><img src="img/discord.png"></a>
+      </div>
     </div>
-    <div class="footer-imgs">
-      <a href="https://www.artstation.com/jacecarson" target="_blank"><img src="img/artstation.png"></a>
-      <a href="https://www.instagram.com/saltyyace" target="_blank"><img src="img/instagram2.png"></a>
-      <a href="https://www.twitter.com/Salty_Jace" target="_blank"><img src="img/twitter.png"></a>
-      <a href="https://www.discordapp.com/users/jacecarson" target="_blank"><img src="img/discord.png"></a>
-    </div>
-</div>
-</section>
+  </section>
 
 </body>
 
@@ -217,55 +239,55 @@
 <script>
 
   //light mode and dark mode toggle
-var toggle = document.getElementById("theme-toggle");
+  var toggle = document.getElementById("theme-toggle");
 
-var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-if (storedTheme)
+  var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  if (storedTheme)
     document.documentElement.setAttribute('data-theme', storedTheme)
 
 
-toggle.onclick = function() {
+  toggle.onclick = function () {
     var currentTheme = document.documentElement.getAttribute("data-theme");
     var targetTheme = "light";
 
     if (currentTheme === "light") {
-        targetTheme = "dark";
+      targetTheme = "dark";
     }
 
     document.documentElement.setAttribute('data-theme', targetTheme)
     localStorage.setItem('theme', targetTheme);
 
-    checkbox.addEventListener( 'change', function() {
-         localStorage.setItem('light',this.checked);
-         if(this.checked) {
-              body.classList.add('light')
-         } else {
-              body.classList.remove('light')     
-         }
+    checkbox.addEventListener('change', function () {
+      localStorage.setItem('light', this.checked);
+      if (this.checked) {
+        body.classList.add('light')
+      } else {
+        body.classList.remove('light')
+      }
     });
-};
+  };
 
-//header scroll down disapear
+  //header scroll down disapear
 
-var header = document.querySelector("header");
-var navbarHeight = header.offsetHeight;
-var lastScrollTop = 0;
+  var header = document.querySelector("header");
+  var navbarHeight = header.offsetHeight;
+  var lastScrollTop = 0;
 
-window.onscroll = function() {scrollHide()};
+  window.onscroll = function () { scrollHide() };
 
-function scrollHide() {
-  var st = window.pageYOffset || document.documentElement.scrollTop;
-  console.log(st);
-  if (st > lastScrollTop) {
-    header.classList.add('hide');
-  } else {
-    header.classList.remove('hide');
+  function scrollHide() {
+    var st = window.pageYOffset || document.documentElement.scrollTop;
+    console.log(st);
+    if (st > lastScrollTop) {
+      header.classList.add('hide');
+    } else {
+      header.classList.remove('hide');
+    }
+    lastScrollTop = st <= 0 ? 0 : st;
   }
-  lastScrollTop = st <= 0 ? 0 : st;
-}
 
-function myFunction() {
-  document.getElementsByClassName('parallax').style.transition = "all 2s";
-}
+  function myFunction() {
+    document.getElementsByClassName('parallax').style.transition = "all 2s";
+  }
 
 </script>
