@@ -289,16 +289,6 @@ section{
     color: var(--main-color);
     font-weight: 200;
 }
-.videobutton {
-    color: #ffffff;
-    background-color: var(--highlight-color);
-    width: fit-content;
-    padding: 7px;
-    border-radius: 7px;
-}
-.videobutton a {
-    color: #ffffff;
-}
 .about{
     color: var(--text-color);
 }
