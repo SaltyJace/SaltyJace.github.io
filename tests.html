@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html {
+            background-color: #130f13;
+        }
+
+        body {
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+
+        .result {
+            width: 60vw;
+            height: 70vh;
+            padding: 20px;
+            background-image: url('https://img.buzzfeed.com/buzzfeed-static/complex/images/apbvkbqmjrlhkni1fyui/the-north-face-tnf-x-lead.jpg?output-format=jpg&output-quality=auto'); /* Default background image */
+            background-size: cover;
+            color: #fff;
+            transition: background-image 0.3s ease;
+        }
+
+        .option {
+            display: inline-block;
+            padding: 10px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .option img {
+            width: 180px;
+            height: 180px;
+        }
+
+        .result h1 {
+            margin: 0;
+        }
+
+        .result p {
+            margin: 10px 0;
+        }
+
+        .option1.active ~ .result {
+            background-image: url("https://rockrun.com/cdn/shop/articles/mammut-profile_1600x.jpg?v=1628255761");
+        }
+
+        .option2.active ~ .result {
+            background-image: url('https://salomonsports.co.za/cdn/shop/articles/How-to-hike-with-trekking-poles-usage.jpg?v=1634922487&width=1618');
+        }
+
+        .option3.active ~ .result {
+            background-image: url('https://21run.com/blog/app/uploads//2020/09/Titel_Goretex.jpg');
+        }
+
+        .option4.active ~ .result {
+            background-image: url('https://miro.medium.com/v2/resize:fit:1400/0*pXUfleLzzg9eJcWz');
+        }
+
+        .option5.active ~ .result {
+            background-image: url('https://img.buzzfeed.com/buzzfeed-static/complex/images/apbvkbqmjrlhkni1fyui/the-north-face-tnf-x-lead.jpg?output-format=jpg&output-quality=auto');
+        }
+
+        .option6.active ~ .result {
+            background-image: url('https://www.apetogentleman.com/wp-content/uploads/2022/10/SnowboardingBrandsMainBurton2.jpg');
+        }
+
+        .option7.active ~ .result {
+            background-image: url('https://freeskier.com/wp-content/uploads/2019/11/Hemisphere-lifestyle-2.jpg');
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var options = document.querySelectorAll(".option");
+            var result = document.querySelector(".result");
+            var currentIndex = 0;
+            var timer;
+
+            function showOption(index) {
+                // Remove 'active' class from all options
+                options.forEach(function(opt) {
+                    opt.classList.remove("active");
+                });
+
+                // Add 'active' class to the current option
+                options[index].classList.add("active");
+
+                // Change the content and background image of the result div
+                var info = options[index].getAttribute("data-info");
+                var company = options[index].getAttribute("data-company");
+                var background = options[index].getAttribute("data-background");
+
+                // Set the content for the result div
+                result.innerHTML = "<h1>" + company + "</h1>";
+                result.innerHTML += "<p>" + getCompanyInfo(company) + "</p>";
+
+                if (background) {
+                    result.style.backgroundImage = "url('" + background + "')";
+                } else {
+                    // Reset to default background if no data-background attribute is present
+                    result.style.backgroundImage = "url('https://img.buzzfeed.com/buzzfeed-static/complex/images/apbvkbqmjrlhkni1fyui/the-north-face-tnf-x-lead.jpg?output-format=jpg&output-quality=auto')";
+                }
+
+                // Reset the timer
+                clearInterval(timer);
+                timer = setInterval(nextOption, 10000);
+            }
+
+            function nextOption() {
+                currentIndex = (currentIndex + 1) % options.length;
+                showOption(currentIndex);
+            }
+
+            // Show the first option when the page loads
+            showOption(currentIndex);
+
+            // Set the timer to switch to the next option every 10 seconds
+            timer = setInterval(nextOption, 10000);
+
+            // Add click event listeners to each option
+            options.forEach(function(option, index) {
+                option.addEventListener("click", function() {
+                    currentIndex = index;
+                    showOption(currentIndex);
+                });
+            });
+
+            // Function to get company information
+            function getCompanyInfo(company) {
+                switch (company) {
+                    case "Mammut":
+                        return "Mammut is a Swiss outdoor brand that specializes in mountaineering and trekking equipment.";
+                    case "Salomon":
+                        return "Salomon is a French sports equipment manufacturing company, known for its ski and snowboard equipment.";
+                    case "Gore-tex":
+                        return "Gore-tex is a waterproof and breathable fabric technology, often used in outdoor and sports clothing.";
+                    case "Patagonia":
+                        return "Patagonia is an American clothing company that focuses on sustainable and environmentally friendly outdoor clothing.";
+                    case "The North Face":
+                        return "The North Face is an American outdoor recreation product company, specializing in outerwear, fleece, coats, shirts, and equipment such as backpacks, tents, and sleeping bags.";
+                    case "Burton":
+                        return "Burton is a snowboard manufacturer and retailer known for its snowboards, boots, bindings, and other snowboarding gear.";
+                    case "Outdoor Research":
+                        return "Outdoor Research is an American outdoor clothing manufacturer and supplier, offering a wide range of gear for various outdoor activities.";
+                    default:
+                        return "";
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+
+    <div class="result">
+        <h1>Shop</h1>
+        <p>Welcome to our shop! Choose a brand to explore more.</p>
+    </div>
+
+    <div class="option option1" data-info="Mammut" data-company="Mammut" data-background="https://rockrun.com/cdn/shop/articles/mammut-profile_1600x.jpg?v=1628255761">
+        <img src="https://content.backcountry.com/bcs/marketing/Mammut" alt="">
+    </div>
+    <div class="option option2" data-info="Salomon" data-company="Salomon" data-background="https://salomonsports.co.za/cdn/shop/articles/How-to-hike-with-trekking-poles-usage.jpg?v=1634922487&width=1618">
+        <img src="https://content.backcountry.com/bcs/marketing/Salomon-2" alt="">
+    </div>
+    <div class="option option3" data-info="Gore-tex" data-company="Gore-tex" data-background="https://21run.com/blog/app/uploads//2020/09/Titel_Goretex.jpg">
+        <img src="https://content.backcountry.com/bcs/marketing/Gore-tex-2" alt="">
+    </div>
+    <div class="option option4" data-info="Patagonia" data-company="Patagonia" data-background="https://miro.medium.com/v2/resize:fit:1400/0*pXUfleLzzg9eJcWz">
+        <img src="https://content.backcountry.com/bcs/marketing/Patagonia-3" alt="">
+    </div>   
+    <div class="option option5" data-info="The North Face" data-company="The North Face" data-background="https://img.buzzfeed.com/buzzfeed-static/complex/images/apbvkbqmjrlhkni1fyui/the-north-face-tnf-x-lead.jpg?output-format=jpg&output-quality=auto">
+        <img src="https://content.backcountry.com/bcs/marketing/TNF-7" alt="">
+    </div>  
+    <div class="option option6" data-info="Burton" data-company="Burton" data-background="https://www.apetogentleman.com/wp-content/uploads/2022/10/SnowboardingBrandsMainBurton2.jpg">
+        <img src="https://content.backcountry.com/bcs/marketing/Burton-1" alt="">
+    </div>  
+    <div class="option option7" data-info="Outdoor Research" data-company="Outdoor Research" data-background="https://freeskier.com/wp-content/uploads/2019/11/Hemisphere-lifestyle-2.jpg">
+        <img src="https://content.backcountry.com/bcs/marketing/OR" alt="">
+    </div>  
+
+</body>
+</html>
