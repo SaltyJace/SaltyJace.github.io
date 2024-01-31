@@ -9,18 +9,21 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"></head>
 
   <body>
 
+<!---https://coolors.co/palette/dad7cd-a3b18a-588157-3a5a40-344e41---->
+
     <div class="result">
-        <h1>Shop</h1>
-        <p>Welcome to our shop! Choose a brand to explore more.</p>
+        <h2>Shop</h2>
+        <h1>Brand Placeholder</h1>
+        <p>Choose a brand to explore more.</p>
     </div>
 
     <div class="options-container">
-        <div class="option option1" data-info="Mammut" data-company="Mammut" data-background="https://rockrun.com/cdn/shop/articles/mammut-profile_1600x.jpg?v=1628255761">
+        <div class="option option1" data-info="MAMMUT" data-company="MAMMUT" data-background="https://rockrun.com/cdn/shop/articles/mammut-profile_1600x.jpg?v=1628255761">
             <img src="https://content.backcountry.com/bcs/marketing/Mammut" alt="">
         </div>
         <div class="option option2" data-info="Salomon" data-company="Salomon" data-background="https://salomonsports.co.za/cdn/shop/articles/How-to-hike-with-trekking-poles-usage.jpg?v=1634922487&width=1618">
@@ -79,7 +82,7 @@
 
             // Reset the timer
             clearInterval(timer);
-            timer = setInterval(nextOption, 10000);
+            timer = setInterval(nextOption, 15000);
         }
 
         function nextOption() {
@@ -91,7 +94,7 @@
         showOption(currentIndex);
 
         // Set the timer to switch to the next option every 10 seconds
-        timer = setInterval(nextOption, 10000);
+        timer = setInterval(nextOption, 15000);
 
         // Add click event listeners to each option
         options.forEach(function(option, index) {
@@ -104,14 +107,14 @@
         // Function to get company information
         function getCompanyInfo(company) {
             switch (company) {
-                case "Mammut":
-                    return "Mammut is a Swiss outdoor brand that specializes in mountaineering and trekking equipment.";
+                case "MAMMUT":
+                    return "Mammut is a Swiss brand that specializes in mountaineering and trekking equipment.";
                 case "Salomon":
                     return "Salomon is a French sports equipment manufacturing company, known for its ski and snowboard equipment.";
                 case "Gore-tex":
-                    return "Gore-tex is a waterproof and breathable fabric technology, often used in outdoor and sports clothing.";
+                    return "Gore-tex's waterproof and breathable fabric technology offers a breathable waterproof barrier.";
                 case "Patagonia":
-                    return "Patagonia is an American clothing company that focuses on sustainable and environmentally friendly outdoor clothing.";
+                    return "Patagonia's sustainability and environmentally friendly outdoor clothing .";
                 case "The North Face":
                     return "The North Face is an American outdoor recreation product company, specializing in outerwear, fleece, coats, shirts, and equipment such as backpacks, tents, and sleeping bags.";
                 case "Burton":

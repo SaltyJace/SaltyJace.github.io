@@ -1,3 +1,12 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+  }
 html {
     background-color: #130f13;
 }
@@ -15,6 +24,15 @@ body {
     background-size: cover;
     color: #fff;
     transition: background-image 0.3s ease;
+}
+
+.result h1{
+    width: auto;
+    margin-top: 50vh;
+}
+.result p{
+    width: 20vw;
+    font-weight: 300;
 }
 .options-container{
     padding: 20px;
@@ -34,13 +52,6 @@ body {
     height: 8vw;
 }
 
-.result h1 {
-    margin-top: 50%;
-}
-
-.result p {
-    margin: 10px 0;
-}
 
 .option1.active ~ .result {
     background-image: url("https://rockrun.com/cdn/shop/articles/mammut-profile_1600x.jpg?v=1628255761");
