@@ -1,129 +1,422 @@
 <html>
-  <head>
-    <title>Jace Carson Design Example</title>
+
+<head>
+    <title>E-Commerce</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="designcss.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"></head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"rel="stylesheet">
+    <link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+</head>
 
-  <body>
+<body>
+    <!---https://coolors.co/palette/dad7cd-a3b18a-588157-3a5a40-344e41---->
+    <header>
+        <div class="navcontainercolor">
+            <div class="navcontainer">
+                <div class="logoimg"><img src="/img/uinta 1.png"></div>
 
-<!---https://coolors.co/palette/dad7cd-a3b18a-588157-3a5a40-344e41---->
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hike</button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Packs & Bags</a>
+                            <a class="dropdown-item" href="#">Shoes</a>
+                            <a class="dropdown-item" href="#">Base Layers</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Camp</button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Packs & Bags</a>
+                            <a class="dropdown-item" href="#">Shoes</a>
+                            <a class="dropdown-item" href="#">Base Layers</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bike</button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Packs & Bags</a>
+                            <a class="dropdown-item" href="#">Shoes</a>
+                            <a class="dropdown-item" href="#">Base Layers</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Winter</button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Packs & Bags</a>
+                            <a class="dropdown-item" href="#">Shoes</a>
+                            <a class="dropdown-item" href="#">Base Layers</a>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="bodycontainer">
+
+        <div class="floatLeft bannerRow w100" style="width:100%;">
+            <a href="">
+                <img id="desktopHero" alt="Shop winter sports" src="img/banner.jpg" width="100%">
+            </a>
+        </div>
+
+        <div class="floatLeft bannerRow w100" style="width:100%;margin-top: -1000px; z-index: 2;">
+            <a href="">
+                <img id="desktopHero" alt="Shop winter sports" src="img/BANNER-TOPPER.png" width="100%">
+            </a>
+        </div>
+
+        <div class="bestsellers" style="margin-left: 20vw; margin-right: 20vw; margin-top: -30px;">
+            <h1>shop the sale</h1>
+        </div>
+
+        <div class="floatLeft bannerRow w100"
+            style="margin-top: 15vh; width: 60vw; margin-left: 20%; margin-right: 20%;">
+            <div class="row" style="margin-top: 10px;">
+                <!-- First Large Image (1/3 width) -->
+                <div class="col-md-4">
+                    <div style="max-width: 100%;">
+                        <a href="">
+                            <img id="desktopHero" alt="Shop Printers" src="img/mens.jpg" width="100%">
+                        </a>
+                    </div>
+                </div>
+                <!-- Second Large Image (1/3 width) -->
+                <div class="col-md-4">
+                    <div style="max-width: 100%;">
+                        <a href="">
+                            <img id="desktopHero" alt="Shop Hugger Mugger" src="img/womens.jpg" width="100%">
+
+                        </a>
+                    </div>
+                </div>
+                <!-- Third Large Image (1/3 width) -->
+                <div class="col-md-4">
+                    <div style="max-width: 100%;">
+                        <a href="">
+                            <img id="desktopHero" alt="Shop Writing Supplies" src="img/kids.jpg" width="100%">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="whitespace" style="background-color: #e8e8e8; margin-top: -400px; height: 440px;"></div>
+
+        <div class="floatLeft bannerRow w100" style="width:100%;">
+            <a href="">
+                <img id="desktopHero" alt="Shop winter sports" src="img/shredszn.jpg" width="100%">
+            </a>
+        </div>
+        <div class="bestsellers" style="margin-left: 20vw; margin-right: 20vw; margin-top: 50px;">
+            <h1>shop our bestsellers</h1>
+        </div>
+        <div class="carousel-wrap" style="margin-top: 5px;">
+            <div class="owl-carousel">
+                <div class="item" href=""><img src="img/designprod1.jpg">
+                    <div class="itemcontent">
+                        <h2>Clean Climbing Beanie</h2>
+                        <p>$49.99</p>
+                    </div>
+                </div>
+                <div class="item" href=""><img src="img/designprod2.jpg">
+                    <div class="itemcontent">
+                        <h2>The North Face Alta Vista Jacket</h2>
+                        <p>$98.93 <s>$140.00</s></p>
+                    </div>
+                </div>
+                <div class="item" href=""><img src="img/designprod3.jpg">
+                    <div class="itemcontent">
+                        <h2>Arc'teryx Atom Insulated Hoodie</h2>
+                        <p>$399.99</p>
+                    </div>
+                </div>
+                <div class="item" href=""><img src="img/designprod4.jpg">
+                    <div class="itemcontent">
+                        <h2>prAna Stretch Zion Slim Pants II</h2>
+                        <p>$94.99</p>
+                    </div>
+                </div>
+                <div class="item" href=""><img src="img/designprod5.jpg">
+                    <div class="itemcontent">
+                        <h2>On Cloudvista Waterproof Trail-Running Shoes</h2>
+                        <p>$159.99</p>
+                    </div>
+                </div>
+                <div class="item" href=""><img src="img/designprod6.jpg">
+                    <div class="itemcontent">
+                        <h2>Patagonia Better Sweater Fleece Jacket</h2>
+                        <p>$159.99</p>
+                    </div>
+                </div>
+                <div class="item" href=""><img src="img/designprod7.jpg">
+                    <div class="itemcontent">
+                        <h2>Black Diamond First Light Stretch Insulated Hoodie</h2>
+                        <p>$294.99</p>
+                    </div>
+                </div>
+                <div class="item" href=""><img src="img/designprod8.jpg">
+                    <div class="itemcontent">
+                        <h2>The North Face Borealis Pack</h2>
+                        <p>$99.99</p>
+                    </div>
+                </div>
+                <div class="item" href=""><img src="img/designprod9.jpg""> <div class=" itemcontent">
+                    <h2>Patagonia Black Hole Pack - 32 L</h2>
+                    <p>$169.99</p>
+                </div>
+            </div>
+            <div class="item" href=""><img src="img/designprod10.jpg">
+                <div class="itemcontent">
+                    <h2>Cannondale Trail 8 Mountain Bike</h2>
+                    <p>$534.99</p>
+                </div>
+            </div>
+            <div class="item" href=""><img src="img/designprod11.jpg">
+                <div class="itemcontent">
+                    <h2>Kelty Discovery Basecamp 4 Tent</h2>
+                    <p>$119.99</p>
+                </div>
+            </div>
+            <div class="item" href=""><img src="img/designprod12.jpg">
+                <div class="itemcontent">
+                    <h2>Big Agnes Divide Insulated Sleeping Pad</h2>
+                    <p>$119.99</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bestsellers" style="margin-left: 20vw; margin-right: 20vw; margin-top: 50px;">
+        <h1>shop by brand</h1>
+    </div>
+
+    <div class="options-container">
+        <div class="option option1" data-info="The North Face" data-company="The North Face"
+            data-background="/img/tnflifestyle.jpg">
+            <img src="https://content.backcountry.com/bcs/marketing/TNF-7" alt="">
+        </div>
+        <div class="option option2" data-info="Salomon" data-company="Salomon"
+            data-background="/img/salomonlifestyle.jpg">
+            <img src="https://content.backcountry.com/bcs/marketing/Salomon-2" alt="">
+        </div>
+        <div class="option option3" data-info="Gore-tex" data-company="Gore-tex"
+            data-background="/img/goretexlifestyle.jpg">
+            <img src="https://content.backcountry.com/bcs/marketing/Gore-tex-2" alt="">
+        </div>
+        <div class="option option4" data-info="Patagonia" data-company="Patagonia"
+            data-background="/img/patagonialifestyle.jpg">
+            <img src="https://content.backcountry.com/bcs/marketing/Patagonia-3" alt="">
+        </div>
+        <div class="option option5" data-info="Mammut" data-company="Mammut" data-background="/img/mammut.jpg">
+            <img src="https://content.backcountry.com/bcs/marketing/Mammut" alt="">
+        </div>
+        <div class="option option6" data-info="Burton" data-company="Burton" data-background="/img/burtonlifestyle.jpg">
+            <img src="https://content.backcountry.com/bcs/marketing/Burton-1" alt="">
+        </div>
+        <div class="option option7" data-info="Outdoor Research" data-company="Outdoor Research"
+            data-background="/img/orlifestyle.jpg">
+            <img src="https://content.backcountry.com/bcs/marketing/OR" alt="">
+        </div>
+    </div>
 
     <div class="result">
         <h2>Shop</h2>
         <h1>Brand Placeholder</h1>
         <p>Choose a brand to explore more.</p>
     </div>
-
-    <div class="options-container">
-        <div class="option option1" data-info="MAMMUT" data-company="MAMMUT" data-background="https://rockrun.com/cdn/shop/articles/mammut-profile_1600x.jpg?v=1628255761">
-            <img src="https://content.backcountry.com/bcs/marketing/Mammut" alt="">
+    <br><br>
+    <div class="bottomcontent">
+        <div class="community"> <img
+                src="https://www.thenorthface.com/content/publish/caas/v1/media/418560/data/0f01150498c05946d14ba841f24bfcf8/xp-stories-d.png">
+            <p>join our Community</p>
         </div>
-        <div class="option option2" data-info="Salomon" data-company="Salomon" data-background="https://salomonsports.co.za/cdn/shop/articles/How-to-hike-with-trekking-poles-usage.jpg?v=1634922487&width=1618">
-            <img src="https://content.backcountry.com/bcs/marketing/Salomon-2" alt="">
+        <div class="shipping"> <img
+                src="https://www.thenorthface.com/content/publish/caas/v1/media/400074/data/a85076666e5b4c70a66535e5c4b3968a/stories-2.png">
+            <p>shipping info</p>
         </div>
-        <div class="option option3" data-info="Gore-tex" data-company="Gore-tex" data-background="https://21run.com/blog/app/uploads//2020/09/Titel_Goretex.jpg">
-            <img src="https://content.backcountry.com/bcs/marketing/Gore-tex-2" alt="">
-        </div>
-        <div class="option option4" data-info="Patagonia" data-company="Patagonia" data-background="https://miro.medium.com/v2/resize:fit:1400/0*pXUfleLzzg9eJcWz">
-            <img src="https://content.backcountry.com/bcs/marketing/Patagonia-3" alt="">
-        </div>   
-        <div class="option option5" data-info="The North Face" data-company="The North Face" data-background="https://img.buzzfeed.com/buzzfeed-static/complex/images/apbvkbqmjrlhkni1fyui/the-north-face-tnf-x-lead.jpg?output-format=jpg&output-quality=auto">
-            <img src="https://content.backcountry.com/bcs/marketing/TNF-7" alt="">
-        </div>  
-        <div class="option option6" data-info="Burton" data-company="Burton" data-background="https://www.apetogentleman.com/wp-content/uploads/2022/10/SnowboardingBrandsMainBurton2.jpg">
-            <img src="https://content.backcountry.com/bcs/marketing/Burton-1" alt="">
-        </div>  
-        <div class="option option7" data-info="Outdoor Research" data-company="Outdoor Research" data-background="https://freeskier.com/wp-content/uploads/2019/11/Hemisphere-lifestyle-2.jpg">
-            <img src="https://content.backcountry.com/bcs/marketing/OR" alt="">
+        <div class="giftcard"> <img
+                src="https://www.thenorthface.com/content/publish/caas/v1/media/400186/data/0627c1badcbf2fa2a78fc4d093245905/stories-3.png">
+            <p>buy a gift card</p>
         </div>
     </div>
 
-</body>
-</html>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var options = document.querySelectorAll(".option");
-        var result = document.querySelector(".result");
-        var currentIndex = 0;
-        var timer;
+    <br>
 
-        function showOption(index) {
-            // Remove 'active' class from all options
-            options.forEach(function(opt) {
-                opt.classList.remove("active");
-            });
+    <div class="navfootercolor">
+        <div class="navfooter">
+            <div class="column">
+                <h3 style="color: #fff;">Help</h3>
+                <li href="">Help Center</li>
+                <li href="">Find a Store</li>
+                <li href="">Order Status</li>
+                <li href="">Return Policy</li>
+                <li href="">Start a Reutrn</li>
+                <li href="">Shipping Policy</li>
+                <li href="">Group Sales</li>
+                <li href="">Gift Cards</li>
+                <li href="">Gift Cards Terms and Conditions</li>
+            </div>
+            <div class="column">
+                <h3 style="color: #fff;">About Us</h3>
+                <li href="">About Uinta</li>
+                <li href="">Careers</li>
+                <li href="">Affiliate Program</li>
+                <li href="">Student Discounts</li>
+                <li href="">All Categories</li>
+            </div>
+            <div class="column">
+                <h3 style="color: #ff2350;">Website Info</h3>
+                <li href="">Image Usage</li>
+                <li href="">Software Used</li>
+                <li href="">Website Concepting</li>
+                <li href="">Notes on Final Design</li>
+                <li href="">Future Functionality</li>
+            </div>
+            <div class="column" style="color: #fff;">
+                <h3>Subscribe to our newsletter</h3>
+                <p>Get early access to our sales and new items</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <script>
+            plugins: [
+                new webpack.ProvidePlugin({
+                    $: 'jquery',
+                    jQuery: 'jquery',
+                    'window.jQuery': 'jquery'
+                }),
+            ],
+        </script>
+        <script src="/node_modules/jquery/dist/jquery.js"></script>
+        <script src="/node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
 
-            // Add 'active' class to the current option
-            options[index].classList.add("active");
+        <script>
+                $('.owl-carousel').owlCarousel({
+                    loop: true,
+                    margin: 10,
+                    nav: true,
+                    navText: [
+                        "<i class='fa fa-caret-left'></i>",
+                        "<i class='fa fa-caret-right'></i>"
+                    ],
+                    autoplay: true,
+                    autoplayHoverPause: true,
+                    responsive: {
+                        0: {
+                            items: 1
+                        },
+                        600: {
+                            items: 3
+                        },
+                        1000: {
+                            items: 5
+                        }
+                    }
+                })
+        </script>
 
-            // Change the content and background image of the result div
-            var info = options[index].getAttribute("data-info");
-            var company = options[index].getAttribute("data-company");
-            var background = options[index].getAttribute("data-background");
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-            // Set the content for the result div
-            result.innerHTML = "<h1>" + company + "</h1>";
-            result.innerHTML += "<p>" + getCompanyInfo(company) + "</p>";
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var options = document.querySelectorAll(".option");
+                var result = document.querySelector(".result");
+                var currentIndex = 0;
+                var timer;
 
-            if (background) {
-                result.style.backgroundImage = "url('" + background + "')";
-            } else {
-                // Reset to default background if no data-background attribute is present
-                result.style.backgroundImage = "url('https://img.buzzfeed.com/buzzfeed-static/complex/images/apbvkbqmjrlhkni1fyui/the-north-face-tnf-x-lead.jpg?output-format=jpg&output-quality=auto')";
-            }
+                function showOption(index) {
+                    // Remove 'active' class from all options
+                    options.forEach(function (opt) {
+                        opt.classList.remove("active");
+                    });
 
-            // Reset the timer
-            clearInterval(timer);
-            timer = setInterval(nextOption, 15000);
-        }
+                    // Add 'active' class to the current option
+                    options[index].classList.add("active");
 
-        function nextOption() {
-            currentIndex = (currentIndex + 1) % options.length;
-            showOption(currentIndex);
-        }
+                    // Change the content and background image of the result div
+                    var info = options[index].getAttribute("data-info");
+                    var company = options[index].getAttribute("data-company");
+                    var background = options[index].getAttribute("data-background");
 
-        // Show the first option when the page loads
-        showOption(currentIndex);
+                    // Set the content for the result div
+                    result.innerHTML = "<h1>" + company + "</h1>";
+                    result.innerHTML += "<p>" + getCompanyInfo(company) + "</p>";
 
-        // Set the timer to switch to the next option every 10 seconds
-        timer = setInterval(nextOption, 15000);
+                    if (background) {
+                        result.style.backgroundImage = "url('" + background + "')";
+                    } else {
+                        // Reset to default background if no data-background attribute is present
+                        result.style.backgroundImage = "url('/img/tnflifestyle.jpg')";
+                    }
 
-        // Add click event listeners to each option
-        options.forEach(function(option, index) {
-            option.addEventListener("click", function() {
-                currentIndex = index;
+                    // Reset the timer
+                    clearInterval(timer);
+                    timer = setInterval(nextOption, 15000);
+                }
+
+                function nextOption() {
+                    currentIndex = (currentIndex + 1) % options.length;
+                    showOption(currentIndex);
+                }
+
+                // Show the first option when the page loads
                 showOption(currentIndex);
-            });
-        });
 
-        // Function to get company information
-        function getCompanyInfo(company) {
-            switch (company) {
-                case "MAMMUT":
-                    return "Mammut is a Swiss brand that specializes in mountaineering and trekking equipment.";
-                case "Salomon":
-                    return "Salomon is a French sports equipment manufacturing company, known for its ski and snowboard equipment.";
-                case "Gore-tex":
-                    return "Gore-tex's waterproof and breathable fabric technology offers a breathable waterproof barrier.";
-                case "Patagonia":
-                    return "Patagonia's sustainability and environmentally friendly outdoor clothing .";
-                case "The North Face":
-                    return "The North Face is an American outdoor recreation product company, specializing in outerwear, fleece, coats, shirts, and equipment such as backpacks, tents, and sleeping bags.";
-                case "Burton":
-                    return "Burton is a snowboard manufacturer and retailer known for its snowboards, boots, bindings, and other snowboarding gear.";
-                case "Outdoor Research":
-                    return "Outdoor Research is an American outdoor clothing manufacturer and supplier, offering a wide range of gear for various outdoor activities.";
-                default:
-                    return "";
-            }
-        }
-    });
-</script>
+                // Set the timer to switch to the next option every 10 seconds
+                timer = setInterval(nextOption, 15000);
+
+                // Add click event listeners to each option
+                options.forEach(function (option, index) {
+                    option.addEventListener("click", function () {
+                        currentIndex = index;
+                        showOption(currentIndex);
+                    });
+                });
+
+                // Function to get company information
+                function getCompanyInfo(company) {
+                    switch (company) {
+                        case "Mammut":
+                            return "Mammut is a Swiss brand that specializes in mountaineering and trekking equipment.";
+                        case "Salomon":
+                            return "Salomon is a French sports equipment manufacturing company, known for its ski and snowboard equipment.";
+                        case "Gore-tex":
+                            return "Gore-tex's waterproof and breathable fabric technology offers a breathable waterproof barrier.";
+                        case "Patagonia":
+                            return "Patagonia's sustainability and environmentally friendly outdoor clothing .";
+                        case "The North Face":
+                            return "The North Face is an American outdoor recreation product company, specializing in outerwear, fleece, coats, shirts, and equipment such as backpacks, tents, and sleeping bags.";
+                        case "Burton":
+                            return "Burton is a snowboard manufacturer and retailer known for its snowboards, boots, bindings, and other snowboarding gear.";
+                        case "Outdoor Research":
+                            return "Outdoor Research is an American outdoor clothing manufacturer and supplier, offering a wide range of gear for various outdoor activities.";
+                        default:
+                            return "";
+                    }
+                }
+            });
+
+
+        </script>
+    </footer>
+
+</body>
+
+
+</html>

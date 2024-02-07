@@ -1,184 +1,367 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        html {
-            background-color: #130f13;
-        }
+    <title>Test</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="tests.css">
 
-        body {
-            margin-left: 20%;
-            margin-right: 20%;
-        }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-        .result {
-            width: 60vw;
-            height: 70vh;
-            padding: 20px;
-            background-image: url('https://img.buzzfeed.com/buzzfeed-static/complex/images/apbvkbqmjrlhkni1fyui/the-north-face-tnf-x-lead.jpg?output-format=jpg&output-quality=auto'); /* Default background image */
-            background-size: cover;
-            color: #fff;
-            transition: background-image 0.3s ease;
-        }
-
-        .option {
-            display: inline-block;
-            padding: 10px;
-            color: #fff;
-            cursor: pointer;
-        }
-
-        .option img {
-            width: 180px;
-            height: 180px;
-        }
-
-        .result h1 {
-            margin: 0;
-        }
-
-        .result p {
-            margin: 10px 0;
-        }
-
-        .option1.active ~ .result {
-            background-image: url("https://rockrun.com/cdn/shop/articles/mammut-profile_1600x.jpg?v=1628255761");
-        }
-
-        .option2.active ~ .result {
-            background-image: url('https://salomonsports.co.za/cdn/shop/articles/How-to-hike-with-trekking-poles-usage.jpg?v=1634922487&width=1618');
-        }
-
-        .option3.active ~ .result {
-            background-image: url('https://21run.com/blog/app/uploads//2020/09/Titel_Goretex.jpg');
-        }
-
-        .option4.active ~ .result {
-            background-image: url('https://miro.medium.com/v2/resize:fit:1400/0*pXUfleLzzg9eJcWz');
-        }
-
-        .option5.active ~ .result {
-            background-image: url('https://img.buzzfeed.com/buzzfeed-static/complex/images/apbvkbqmjrlhkni1fyui/the-north-face-tnf-x-lead.jpg?output-format=jpg&output-quality=auto');
-        }
-
-        .option6.active ~ .result {
-            background-image: url('https://www.apetogentleman.com/wp-content/uploads/2022/10/SnowboardingBrandsMainBurton2.jpg');
-        }
-
-        .option7.active ~ .result {
-            background-image: url('https://freeskier.com/wp-content/uploads/2019/11/Hemisphere-lifestyle-2.jpg');
-        }
-    </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var options = document.querySelectorAll(".option");
-            var result = document.querySelector(".result");
-            var currentIndex = 0;
-            var timer;
-
-            function showOption(index) {
-                // Remove 'active' class from all options
-                options.forEach(function(opt) {
-                    opt.classList.remove("active");
-                });
-
-                // Add 'active' class to the current option
-                options[index].classList.add("active");
-
-                // Change the content and background image of the result div
-                var info = options[index].getAttribute("data-info");
-                var company = options[index].getAttribute("data-company");
-                var background = options[index].getAttribute("data-background");
-
-                // Set the content for the result div
-                result.innerHTML = "<h1>" + company + "</h1>";
-                result.innerHTML += "<p>" + getCompanyInfo(company) + "</p>";
-
-                if (background) {
-                    result.style.backgroundImage = "url('" + background + "')";
-                } else {
-                    // Reset to default background if no data-background attribute is present
-                    result.style.backgroundImage = "url('https://img.buzzfeed.com/buzzfeed-static/complex/images/apbvkbqmjrlhkni1fyui/the-north-face-tnf-x-lead.jpg?output-format=jpg&output-quality=auto')";
-                }
-
-                // Reset the timer
-                clearInterval(timer);
-                timer = setInterval(nextOption, 10000);
-            }
-
-            function nextOption() {
-                currentIndex = (currentIndex + 1) % options.length;
-                showOption(currentIndex);
-            }
-
-            // Show the first option when the page loads
-            showOption(currentIndex);
-
-            // Set the timer to switch to the next option every 10 seconds
-            timer = setInterval(nextOption, 10000);
-
-            // Add click event listeners to each option
-            options.forEach(function(option, index) {
-                option.addEventListener("click", function() {
-                    currentIndex = index;
-                    showOption(currentIndex);
-                });
-            });
-
-            // Function to get company information
-            function getCompanyInfo(company) {
-                switch (company) {
-                    case "Mammut":
-                        return "Mammut is a Swiss outdoor brand that specializes in mountaineering and trekking equipment.";
-                    case "Salomon":
-                        return "Salomon is a French sports equipment manufacturing company, known for its ski and snowboard equipment.";
-                    case "Gore-tex":
-                        return "Gore-tex is a waterproof and breathable fabric technology, often used in outdoor and sports clothing.";
-                    case "Patagonia":
-                        return "Patagonia is an American clothing company that focuses on sustainable and environmentally friendly outdoor clothing.";
-                    case "The North Face":
-                        return "The North Face is an American outdoor recreation product company, specializing in outerwear, fleece, coats, shirts, and equipment such as backpacks, tents, and sleeping bags.";
-                    case "Burton":
-                        return "Burton is a snowboard manufacturer and retailer known for its snowboards, boots, bindings, and other snowboarding gear.";
-                    case "Outdoor Research":
-                        return "Outdoor Research is an American outdoor clothing manufacturer and supplier, offering a wide range of gear for various outdoor activities.";
-                    default:
-                        return "";
-                }
-            }
-        });
-    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"rel="stylesheet">
+    <link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
 </head>
-<body>
 
-    <div class="result">
-        <h1>Shop</h1>
-        <p>Welcome to our shop! Choose a brand to explore more.</p>
+<div class="navcontainercolor">
+  <div class="navcontainer">
+    <div class="logoimg"><img src="/img/uinta 1.png"></div>
+
+    <div class="dropdown" id="hikeDropdown">
+      <button class="btn btn-secondary" type="button" id="dropdownMenuButtonHike" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hike</button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonHike">
+      <a class="dropdown-subject"><b>Day Packs</b></a>
+        <a class="dropdown-item" href="#">Packs &amp; Bags</a>
+        <a class="dropdown-item" href="#">Shoes</a>
+        <a class="dropdown-item" href="#">Base Layers</a>
+      <a class="dropdown-subject"><b>Day Packs</b></a>
+        <a class="dropdown-item" href="#">Packs &amp; Bags</a>
+        <a class="dropdown-item" href="#">Shoes</a>
+        <a class="dropdown-item" href="#">Base Layers</a>
+      <a class="dropdown-subject"><b>Day Packs</b></a>
+        <a class="dropdown-item" href="#">Packs &amp; Bags</a>
+        <a class="dropdown-item" href="#">Shoes</a>
+        <a class="dropdown-item" href="#">Base Layers</a>
+        <a class="dropdown-subject"><b>Day Packs</b></a>
+        <a class="dropdown-item" href="#">Packs &amp; Bags</a>
+        <a class="dropdown-item" href="#">Shoes</a>
+        <a class="dropdown-item" href="#">Base Layers</a>
+        <a class="dropdown-subject"><b>Day Packs</b></a>
+        <a class="dropdown-item" href="#">Packs &amp; Bags</a>
+        <a class="dropdown-item" href="#">Shoes</a>
+        <a class="dropdown-item" href="#">Base Layers</a>
+        <a class="dropdown-subject"><b>Day Packs</b></a>
+        <a class="dropdown-item" href="#">Packs &amp; Bags</a>
+        <a class="dropdown-item" href="#">Shoes</a>
+        <a class="dropdown-item" href="#">Base Layers</a>
+        
+      </div>
     </div>
 
-    <div class="option option1" data-info="Mammut" data-company="Mammut" data-background="https://rockrun.com/cdn/shop/articles/mammut-profile_1600x.jpg?v=1628255761">
-        <img src="https://content.backcountry.com/bcs/marketing/Mammut" alt="">
+    <div class="dropdown" id="campDropdown">
+      <button class="btn btn-secondary" type="button" id="dropdownMenuButtonCamp" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Camp</button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonCamp">
+        <a class="dropdown-item" href="#">Packs &amp; Bags</a>
+        <a class="dropdown-item" href="#">Shoes</a>
+        <a class="dropdown-item" href="#">Base Layers</a>
+      </div>
     </div>
-    <div class="option option2" data-info="Salomon" data-company="Salomon" data-background="https://salomonsports.co.za/cdn/shop/articles/How-to-hike-with-trekking-poles-usage.jpg?v=1634922487&width=1618">
-        <img src="https://content.backcountry.com/bcs/marketing/Salomon-2" alt="">
-    </div>
-    <div class="option option3" data-info="Gore-tex" data-company="Gore-tex" data-background="https://21run.com/blog/app/uploads//2020/09/Titel_Goretex.jpg">
-        <img src="https://content.backcountry.com/bcs/marketing/Gore-tex-2" alt="">
-    </div>
-    <div class="option option4" data-info="Patagonia" data-company="Patagonia" data-background="https://miro.medium.com/v2/resize:fit:1400/0*pXUfleLzzg9eJcWz">
-        <img src="https://content.backcountry.com/bcs/marketing/Patagonia-3" alt="">
-    </div>   
-    <div class="option option5" data-info="The North Face" data-company="The North Face" data-background="https://img.buzzfeed.com/buzzfeed-static/complex/images/apbvkbqmjrlhkni1fyui/the-north-face-tnf-x-lead.jpg?output-format=jpg&output-quality=auto">
-        <img src="https://content.backcountry.com/bcs/marketing/TNF-7" alt="">
-    </div>  
-    <div class="option option6" data-info="Burton" data-company="Burton" data-background="https://www.apetogentleman.com/wp-content/uploads/2022/10/SnowboardingBrandsMainBurton2.jpg">
-        <img src="https://content.backcountry.com/bcs/marketing/Burton-1" alt="">
-    </div>  
-    <div class="option option7" data-info="Outdoor Research" data-company="Outdoor Research" data-background="https://freeskier.com/wp-content/uploads/2019/11/Hemisphere-lifestyle-2.jpg">
-        <img src="https://content.backcountry.com/bcs/marketing/OR" alt="">
-    </div>  
 
-</body>
+    <div class="dropdown" id="bikeDropdown">
+      <button class="btn btn-secondary" type="button" id="dropdownMenuButtonBike" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bike</button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonBike">
+        <a class="dropdown-item" href="#">Packs &amp; Bags</a>
+        <a class="dropdown-item" href="#">Shoes</a>
+        <a class="dropdown-item" href="#">Base Layers</a>
+      </div>
+    </div>
+
+    <div class="dropdown" id="winterDropdown">
+      <button class="btn btn-secondary " type="button" id="dropdownMenuButtonWinter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Winter</button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonWinter">
+        <a class="dropdown-item" href="#">Packs &amp; Bags</a>
+        <a class="dropdown-item" href="#">Shoes</a>
+        <a class="dropdown-item" href="#">Base Layers</a>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</footer>
 </html>
+
+<style>
+  * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
+}
+html {
+  background-color: #DAD7CD;
+}
+body{
+  background-color: #DAD7CD;
+}
+.navcontainercolor{
+background-color: #443A5A;
+}
+.navcontainer{
+margin-left: 20%;
+margin-right: 20%;
+display: flex;
+}
+.logoimg{
+height: 75px;
+width: auto;
+padding: 0;
+margin: 0;
+}
+.btn{
+border: #ffffff00;
+background-color: #ffffff00;
+}
+.dropdown{
+padding-left:20px;
+padding:10px;
+margin-top: auto;
+margin-bottom: auto;
+}
+.bodycontainer {
+  background-color: #DAD7CD;
+}
+
+.result {
+  width: 100%;
+  height: 70%;
+  padding: 20px;
+  background-image: url('/img/tnflifestyle.jpg'); /* Default background image */
+  background-size: cover;
+  color: #fff;
+  transition: 0.5s ease;
+}
+
+.result h2{
+width: auto;
+margin-top: 45vh;
+margin-left: 20%;
+ margin-right: 20%;
+}
+
+.result h1{
+  width: auto;
+  margin-top: 55vh;
+  margin-left: 20%;
+   margin-right: 20%;
+   font-family: 'Inter', sans-serif;
+}
+.result p{
+  width: 20vw;
+  font-weight: 300;
+  margin-left: 20%;
+   margin-right: 20%;
+}
+.options-container{
+padding-top: 12px;
+  min-width: 10vw;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.option {
+  cursor: pointer;
+}
+
+.option img {
+  width: 8vw;
+  height: 8vw;
+  transition: .5s ease;
+}
+.option img:hover {
+cursor: pointer;
+width: 8.5vw;
+height: 8.5vw;
+transition: .3s ease;
+}
+.chakra-avatar__svg{
+  display: flex;
+  max-width: 30px;
+  max-height: 30px;
+}
+.carousel-wrap {
+margin: 90px auto;
+padding: 0 5%;
+width: 80%;
+position: relative;
+}
+
+/* fix blank or flashing items on carousel */
+.owl-carousel .item {
+position: relative;
+z-index: 100; 
+-webkit-backface-visibility: hidden; 
+}
+
+/* end fix */
+.owl-nav > div {
+margin-top: -26px;
+position: absolute;
+top: 50%;
+color: #cdcbcd;
+}
+
+.owl-nav i {
+font-size: 52px;
+}
+
+.owl-nav .owl-prev {
+left: -30px;
+}
+
+.owl-nav .owl-next {
+right: -30px;
+}
+h1{
+font-family: 'Lexend Zetta', sans-serif;
+}
+.item{
+border-radius: 5px;
+background-color: #e8e8e8;
+}
+.item img{
+padding: 15px;
+}
+.itemcontent{
+padding-left: 15px;
+padding-right: 15px;
+padding-bottom: 5px;
+height: 80px;
+}
+.item h2{
+font-size: large;
+}
+.item p{
+font-size: medium;
+font-weight: 300;
+}
+.bottomcontent{
+display: grid;
+width: 60%;
+max-width: 60%;
+margin-left: 20%;
+margin-right: 20%;
+grid-template-columns: repeat(4,1fr);
+grid-gap: 10px;
+}
+.bottomcontent img{
+height: 20vw;
+padding: 20px;
+}
+.community{
+grid-column: 1 / 2;
+grid-row: 1;
+background-color: #cdcbcd;
+border-radius: 7px;
+}
+.shipping{
+grid-column: 3;
+grid-row: 1;
+background-color: #cdcbcd;
+border-radius: 7px;
+}
+.giftcard{
+grid-column: 4;
+grid-row: 1;
+background-color: #cdcbcd;
+border-radius: 7px;
+}
+.bottomcontent p {
+padding: 25px;
+font-family: 'Lexend Zetta', sans-serif;
+font-size: 1.5rem;
+text-align: center;
+}
+.navfootercolor{
+background-color: #443A5A;
+}
+.navfooter{
+margin-top: 50px;
+display: grid;
+grid-template-columns: repeat(4,1fr);
+height: 30vh;
+margin-left: 20%;
+margin-right: 20%;
+}
+.column{
+padding-top: 3vh;
+width: 15vw;
+height: 30vh;
+}
+.column li{
+color: #fff;
+padding: 3px;
+
+}
+.newsletter{
+
+}
+
+
+.dropdown-menu {
+  display: none;
+  transition: .3s ease;
+  width: 100vw;
+  height: 30vh;
+  position: fixed;
+}
+
+.dropdown.show .dropdown-menu {
+  display: block;
+  transition: .3s ease;
+}
+
+.btn:hover{
+  background-color: #ffffff00;
+}
+.dropdown-menu a{
+  width: fit-content;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.dropdown-menu a:hover{
+  background-color: #ffffff00;
+}
+
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var dropdowns = document.querySelectorAll(".dropdown");
+
+  dropdowns.forEach(function(dropdown) {
+    var timeoutShow, timeoutHide;
+
+    dropdown.addEventListener("mouseenter", function() {
+      clearTimeout(timeoutHide);
+      timeoutShow = setTimeout(function() {
+        dropdown.classList.add("show");
+      }, 300); // Adjust the delay time to show the dropdown (in milliseconds)
+    });
+
+    dropdown.addEventListener("mouseleave", function() {
+      clearTimeout(timeoutShow);
+      timeoutHide = setTimeout(function() {
+        dropdown.classList.remove("show");
+      }, 300); // Adjust the delay time to hide the dropdown (in milliseconds)
+    });
+  });
+});
+
+
+
+</script>

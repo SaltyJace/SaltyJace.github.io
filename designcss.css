@@ -8,40 +8,77 @@
     text-decoration: none;
   }
 html {
-    background-color: #130f13;
+    background-color: #DAD7CD;
 }
-
-body {
-    margin-left: 20%;
-    margin-right: 20%;
+body{
+    background-color: #DAD7CD;
+}
+.navcontainercolor{
+  background-color: #443A5A;
+}
+.navcontainer{
+  margin-left: 20%;
+  margin-right: 20%;
+  display: flex;
+}
+.logoimg{
+  height: 75px;
+  width: auto;
+  padding: 0;
+  margin: 0;
+}
+.btn{
+  border: #ffffff00;
+  background-color: #ffffff00;
+}
+.dropdown{
+  padding-left:20px;
+  padding:10px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.bodycontainer {
+    background-color: #DAD7CD;
 }
 
 .result {
-    width: 60vw;
-    height: 70vh;
+    width: 100%;
+    height: 70%;
     padding: 20px;
-    background-image: url('https://img.buzzfeed.com/buzzfeed-static/complex/images/apbvkbqmjrlhkni1fyui/the-north-face-tnf-x-lead.jpg?output-format=jpg&output-quality=auto'); /* Default background image */
+    background-image: url('/img/tnflifestyle.jpg'); /* Default background image */
     background-size: cover;
     color: #fff;
-    transition: background-image 0.3s ease;
+    transition: 0.5s ease;
+}
+
+.result h2{
+  width: auto;
+  margin-top: 45vh;
+  margin-left: 20%;
+   margin-right: 20%;
 }
 
 .result h1{
     width: auto;
-    margin-top: 50vh;
+    margin-top: 55vh;
+    margin-left: 20%;
+     margin-right: 20%;
+     font-family: 'Inter', sans-serif;
 }
 .result p{
     width: 20vw;
     font-weight: 300;
+    margin-left: 20%;
+     margin-right: 20%;
 }
 .options-container{
-    padding: 20px;
-    min-width: 100%;
+  padding-top: 12px;
+    min-width: 10vw;
+    height: 10vh;
     display: flex;
     justify-content: space-between;
-    margin-left: auto;
-    margin-right: auto;
-
+    margin-left: 20%;
+    margin-right: 20%;
 }
 .option {
     cursor: pointer;
@@ -50,33 +87,133 @@ body {
 .option img {
     width: 8vw;
     height: 8vw;
+    transition: .5s ease;
+}
+.option img:hover {
+  cursor: pointer;
+  width: 8.5vw;
+  height: 8.5vw;
+  transition: .3s ease;
+}
+.chakra-avatar__svg{
+    display: flex;
+    max-width: 30px;
+    max-height: 30px;
+}
+.carousel-wrap {
+  margin: 90px auto;
+  padding: 0 5%;
+  width: 80%;
+  position: relative;
 }
 
-
-.option1.active ~ .result {
-    background-image: url("https://rockrun.com/cdn/shop/articles/mammut-profile_1600x.jpg?v=1628255761");
+/* fix blank or flashing items on carousel */
+.owl-carousel .item {
+  position: relative;
+  z-index: 100; 
+  -webkit-backface-visibility: hidden; 
 }
 
-.option2.active ~ .result {
-    background-image: url('https://salomonsports.co.za/cdn/shop/articles/How-to-hike-with-trekking-poles-usage.jpg?v=1634922487&width=1618');
+/* end fix */
+.owl-nav > div {
+  margin-top: -26px;
+  position: absolute;
+  top: 50%;
+  color: #cdcbcd;
 }
 
-.option3.active ~ .result {
-    background-image: url('https://21run.com/blog/app/uploads//2020/09/Titel_Goretex.jpg');
+.owl-nav i {
+  font-size: 52px;
 }
 
-.option4.active ~ .result {
-    background-image: url('https://miro.medium.com/v2/resize:fit:1400/0*pXUfleLzzg9eJcWz');
+.owl-nav .owl-prev {
+  left: -30px;
 }
 
-.option5.active ~ .result {
-    background-image: url('https://img.buzzfeed.com/buzzfeed-static/complex/images/apbvkbqmjrlhkni1fyui/the-north-face-tnf-x-lead.jpg?output-format=jpg&output-quality=auto');
+.owl-nav .owl-next {
+  right: -30px;
 }
-
-.option6.active ~ .result {
-    background-image: url('https://www.apetogentleman.com/wp-content/uploads/2022/10/SnowboardingBrandsMainBurton2.jpg');
+h1{
+  font-family: 'Lexend Zetta', sans-serif;
 }
+.item{
+border-radius: 5px;
+  background-color: #e8e8e8;
+}
+.item img{
+  padding: 15px;
+}
+.itemcontent{
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 5px;
+  height: 80px;
+}
+.item h2{
+  font-size: large;
+}
+.item p{
+  font-size: medium;
+  font-weight: 300;
+}
+.bottomcontent{
+  display: grid;
+  width: 60%;
+  max-width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 10px;
+}
+.bottomcontent img{
+  height: 20vw;
+  padding: 20px;
+}
+.community{
+  grid-column: 1 / 2;
+  grid-row: 1;
+  background-color: #cdcbcd;
+  border-radius: 7px;
+}
+.shipping{
+  grid-column: 3;
+  grid-row: 1;
+  background-color: #cdcbcd;
+  border-radius: 7px;
+}
+.giftcard{
+  grid-column: 4;
+  grid-row: 1;
+  background-color: #cdcbcd;
+  border-radius: 7px;
+}
+.bottomcontent p {
+  padding: 25px;
+  font-family: 'Lexend Zetta', sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.navfootercolor{
+  background-color: #443A5A;
+}
+.navfooter{
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  height: 30vh;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.column{
+  padding-top: 3vh;
+  width: 15vw;
+  height: 30vh;
+}
+.column li{
+  color: #fff;
+  padding: 3px;
 
-.option7.active ~ .result {
-    background-image: url('https://freeskier.com/wp-content/uploads/2019/11/Hemisphere-lifestyle-2.jpg');
+}
+.newsletter{
+
 }
