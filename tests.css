@@ -21,8 +21,8 @@ margin-left: 20%;
 margin-right: 20%;
 display: flex;
 }
-.logoimg{
-height: 75px;
+.logoimg img{
+height: 7px;
 width: auto;
 padding: 0;
 margin: 0;
@@ -72,7 +72,7 @@ margin-left: 20%;
    margin-right: 20%;
 }
 .options-container{
-padding-top: 12px;
+  padding-top: 12px;
   min-width: 10vw;
   height: 10vh;
   display: flex;
@@ -214,12 +214,6 @@ color: #fff;
 padding: 3px;
 
 }
-.newsletter{
-
-}
-
-
-
 
 .navcontainer {
   display: flex;
@@ -231,6 +225,8 @@ padding: 3px;
   left: 0 !important;
   right: auto !important;
   text-align: center;
+  transform: translate3d(0px, 18px, 0px);
+  border-radius: 0px;
 }
 
 .dropdown-menu a {
@@ -242,4 +238,20 @@ padding: 3px;
 .dropdown-subject{
   text-decoration: none;
 
+}
+.dropdown-grid{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.dropdown-item{
+  font-weight: 300;
+}
+.search{
+  height: 35px;
+  margin-top: auto;
+  margin-bottom: auto;
 }

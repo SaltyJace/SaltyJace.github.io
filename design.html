@@ -7,12 +7,15 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
     <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
 </head>
@@ -20,63 +23,276 @@
 <body>
     <!---https://coolors.co/palette/dad7cd-a3b18a-588157-3a5a40-344e41---->
     <header>
+        <!--<div class="ribbon" style="text-align: center; background-color: black; color: #fff; height: 30px; width: 100%;"><p>FREE SHIPPING ON ORDERS OVER $50</p></div>--->
         <div class="navcontainercolor">
             <div class="navcontainer">
-                <div class="logoimg"><img src="/img/uinta 1.png"></div>
 
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hike</button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Packs & Bags</a>
-                            <a class="dropdown-item" href="#">Shoes</a>
-                            <a class="dropdown-item" href="#">Base Layers</a>
+                <div class="logoimg" href=""><img src="/img/uinta 1.png"></div>
+
+                <div class="dropdown" id="mensDropdown">
+                    <button class="btn btn-secondary" type="button" id="dropdownMenuButtonMens" aria-haspopup="true" aria-expanded="false" href="">Mens</button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonHike">
+                        <div class="dropdown-grid">
+                            <div class="column1">
+                                <a class="dropdown-subject"><b>Featured</b></a>
+                                <a class="dropdown-item" href="#">New Arrivals</a>
+                                <a class="dropdown-item" href="#">Popular</a>
+                                <a class="dropdown-item" href="#">Sale</a>
+                                <a class="dropdown-subject"><b>Shop by Activity</b></a>
+                                <a class="dropdown-item" href="#">Snow</a>
+                                <a class="dropdown-item" href="#">Running</a>
+                                <a class="dropdown-item" href="#">Hiking</a>
+                                <a class="dropdown-item" href="#">Camping</a>
+                            </div>
+                            <div class="column2">
+                                <a class="dropdown-subject"><b>Outerwear</b></a>
+                                <a class="dropdown-item" href="#">Gore-tex Jackets</a>
+                                <a class="dropdown-item" href="#">Rain Jackets</a>
+                                <a class="dropdown-item" href="#">Down Jackets</a>
+                                <a class="dropdown-item" href="#">Base Layers</a>
+                                <a class="dropdown-subject"><b>Base Layers</b></a>
+                                <a class="dropdown-item" href="#">Fleece</a>
+                                <a class="dropdown-item" href="#">SmartWool</a>
+                                <a class="dropdown-item" href="#">Uinta Basic's</a>
+                            </div>
+                            <div class="column3">
+                                <a class="dropdown-subject"><b>Tops</b></a>
+                                <a class="dropdown-item" href="#">Activewear</a>
+                                <a class="dropdown-item" href="#">T-Shirts</a>
+                                <a class="dropdown-item" href="#">Sweatshirts & Hoodies</a>
+                                <a class="dropdown-subject"><b>Bottoms</b></a>
+                                <a class="dropdown-item" href="#">Pants</a>
+                                <a class="dropdown-item" href="#">Sweatpants & Joggers</a>
+                                <a class="dropdown-item" href="#">Shorts</a>
+                                <a class="dropdown-item" href="#">More</a>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Camp</button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Packs & Bags</a>
-                            <a class="dropdown-item" href="#">Shoes</a>
-                            <a class="dropdown-item" href="#">Base Layers</a>
-                        </div>
-                    </div>
-
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bike</button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Packs & Bags</a>
-                            <a class="dropdown-item" href="#">Shoes</a>
-                            <a class="dropdown-item" href="#">Base Layers</a>
-                        </div>
-                    </div>
-
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Winter</button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Packs & Bags</a>
-                            <a class="dropdown-item" href="#">Shoes</a>
-                            <a class="dropdown-item" href="#">Base Layers</a>
-                        </div>
                 </div>
+
+                <div class="dropdown" id="womensDropdown">
+                    <button class="btn btn-secondary" type="button" id="dropdownMenuButtonWomens" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Womens</button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonWomens">
+                        <div class="dropdown-grid">
+                            <div class="column1">
+                                <a class="dropdown-subject"><b>Featured</b></a>
+                                <a class="dropdown-item" href="#">New Arrivals</a>
+                                <a class="dropdown-item" href="#">Popular</a>
+                                <a class="dropdown-item" href="#">Sale</a>
+                                <a class="dropdown-subject"><b>Shop by Activity</b></a>
+                                <a class="dropdown-item" href="#">Snow</a>
+                                <a class="dropdown-item" href="#">Running</a>
+                                <a class="dropdown-item" href="#">Hiking</a>
+                                <a class="dropdown-item" href="#">Camping</a>
+                            </div>
+                            <div class="column2">
+                                <a class="dropdown-subject"><b>Outerwear</b></a>
+                                <a class="dropdown-item" href="#">Gore-tex Jackets</a>
+                                <a class="dropdown-item" href="#">Rain Jackets</a>
+                                <a class="dropdown-item" href="#">Down Jackets</a>
+                                <a class="dropdown-item" href="#">Base Layers</a>
+                                <a class="dropdown-subject"><b>Base Layers</b></a>
+                                <a class="dropdown-item" href="#">Fleece</a>
+                                <a class="dropdown-item" href="#">SmartWool</a>
+                                <a class="dropdown-item" href="#">Uinta Basic's</a>
+                            </div>
+                            <div class="column3">
+                                <a class="dropdown-subject"><b>Tops</b></a>
+                                <a class="dropdown-item" href="#">Activewear</a>
+                                <a class="dropdown-item" href="#">T-Shirts</a>
+                                <a class="dropdown-item" href="#">Sweatshirts & Hoodies</a>
+                                <a class="dropdown-subject"><b>Bottoms</b></a>
+                                <a class="dropdown-item" href="#">Pants</a>
+                                <a class="dropdown-item" href="#">Sweatpants & Joggers</a>
+                                <a class="dropdown-item" href="#">Shorts</a>
+                                <a class="dropdown-item" href="#">More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown" id="kidsDropdown">
+                    <button class="btn btn-secondary" type="button" id="dropdownMenuButtonKids" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Kids</button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonKids">
+                        <div class="dropdown-grid">
+                            <div class="column1">
+                                <a class="dropdown-subject"><b>Featured</b></a>
+                                <a class="dropdown-item" href="#">New Arrivals</a>
+                                <a class="dropdown-item" href="#">Popular</a>
+                                <a class="dropdown-item" href="#">Sale</a>
+                                <a class="dropdown-subject"><b>Shop by Activity</b></a>
+                                <a class="dropdown-item" href="#">Snow</a>
+                                <a class="dropdown-item" href="#">Running</a>
+                                <a class="dropdown-item" href="#">Hiking</a>
+                                <a class="dropdown-item" href="#">Camping</a>
+                            </div>
+                            <div class="column2">
+                                <a class="dropdown-subject"><b>Outerwear</b></a>
+                                <a class="dropdown-item" href="#">Gore-tex Jackets</a>
+                                <a class="dropdown-item" href="#">Rain Jackets</a>
+                                <a class="dropdown-item" href="#">Down Jackets</a>
+                                <a class="dropdown-item" href="#">Base Layers</a>
+                                <a class="dropdown-subject"><b>Base Layers</b></a>
+                                <a class="dropdown-item" href="#">Fleece</a>
+                                <a class="dropdown-item" href="#">SmartWool</a>
+                                <a class="dropdown-item" href="#">Uinta Basic's</a>
+                            </div>
+                            <div class="column3">
+                                <a class="dropdown-subject"><b>Tops</b></a>
+                                <a class="dropdown-item" href="#">Activewear</a>
+                                <a class="dropdown-item" href="#">T-Shirts</a>
+                                <a class="dropdown-item" href="#">Sweatshirts & Hoodies</a>
+                                <a class="dropdown-subject"><b>Bottoms</b></a>
+                                <a class="dropdown-item" href="#">Pants</a>
+                                <a class="dropdown-item" href="#">Sweatpants & Joggers</a>
+                                <a class="dropdown-item" href="#">Shorts</a>
+                                <a class="dropdown-item" href="#">More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown" id="winterDropdown">
+                    <button class="btn btn-secondary " type="button" id="dropdownMenuButtonWinter"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Winter</button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonWinter">
+                        <div class="dropdown-grid">
+                            <div class="column1">
+                                <a class="dropdown-subject"><b>Featured</b></a>
+                                <a class="dropdown-item" href="#">New Arrivals</a>
+                                <a class="dropdown-item" href="#">Popular</a>
+                                <a class="dropdown-item" href="#">Sale</a>
+                                <a class="dropdown-subject"><b>Shop by Activity</b></a>
+                                <a class="dropdown-item" href="#">Snow</a>
+                                <a class="dropdown-item" href="#">Running</a>
+                                <a class="dropdown-item" href="#">Hiking</a>
+                                <a class="dropdown-item" href="#">Camping</a>
+                            </div>
+                            <div class="column2">
+                                <a class="dropdown-subject"><b>Outerwear</b></a>
+                                <a class="dropdown-item" href="#">Gore-tex Jackets</a>
+                                <a class="dropdown-item" href="#">Rain Jackets</a>
+                                <a class="dropdown-item" href="#">Down Jackets</a>
+                                <a class="dropdown-item" href="#">Base Layers</a>
+                                <a class="dropdown-subject"><b>Base Layers</b></a>
+                                <a class="dropdown-item" href="#">Fleece</a>
+                                <a class="dropdown-item" href="#">SmartWool</a>
+                                <a class="dropdown-item" href="#">Uinta Basic's</a>
+                            </div>
+                            <div class="column3">
+                                <a class="dropdown-subject"><b>Tops</b></a>
+                                <a class="dropdown-item" href="#">Activewear</a>
+                                <a class="dropdown-item" href="#">T-Shirts</a>
+                                <a class="dropdown-item" href="#">Sweatshirts & Hoodies</a>
+                                <a class="dropdown-subject"><b>Bottoms</b></a>
+                                <a class="dropdown-item" href="#">Pants</a>
+                                <a class="dropdown-item" href="#">Sweatpants & Joggers</a>
+                                <a class="dropdown-item" href="#">Shorts</a>
+                                <a class="dropdown-item" href="#">More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown" id="campDropdown">
+                    <button class="btn btn-secondary " type="button" id="dropdownMenuButtonCamp" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Camp</button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonCamp">
+                        <div class="dropdown-grid">
+                            <div class="column1">
+                                <a class="dropdown-subject"><b>Featured</b></a>
+                                <a class="dropdown-item" href="#">New Arrivals</a>
+                                <a class="dropdown-item" href="#">Popular</a>
+                                <a class="dropdown-item" href="#">Sale</a>
+                                <a class="dropdown-subject"><b>Shop by Activity</b></a>
+                                <a class="dropdown-item" href="#">Snow</a>
+                                <a class="dropdown-item" href="#">Running</a>
+                                <a class="dropdown-item" href="#">Hiking</a>
+                                <a class="dropdown-item" href="#">Camping</a>
+                            </div>
+                            <div class="column2">
+                                <a class="dropdown-subject"><b>Outerwear</b></a>
+                                <a class="dropdown-item" href="#">Gore-tex Jackets</a>
+                                <a class="dropdown-item" href="#">Rain Jackets</a>
+                                <a class="dropdown-item" href="#">Down Jackets</a>
+                                <a class="dropdown-item" href="#">Base Layers</a>
+                                <a class="dropdown-subject"><b>Base Layers</b></a>
+                                <a class="dropdown-item" href="#">Fleece</a>
+                                <a class="dropdown-item" href="#">SmartWool</a>
+                                <a class="dropdown-item" href="#">Uinta Basic's</a>
+                            </div>
+                            <div class="column3">
+                                <a class="dropdown-subject"><b>Tops</b></a>
+                                <a class="dropdown-item" href="#">Activewear</a>
+                                <a class="dropdown-item" href="#">T-Shirts</a>
+                                <a class="dropdown-item" href="#">Sweatshirts & Hoodies</a>
+                                <a class="dropdown-subject"><b>Bottoms</b></a>
+                                <a class="dropdown-item" href="#">Pants</a>
+                                <a class="dropdown-item" href="#">Sweatpants & Joggers</a>
+                                <a class="dropdown-item" href="#">Shorts</a>
+                                <a class="dropdown-item" href="#">More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown" id="winterDropdown">
+                    <button class="btn btn-secondary " type="button" id="dropdownMenuButtonHike" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Hike</button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonHike">
+                        <div class="dropdown-grid">
+                            <div class="column1">
+                                <a class="dropdown-subject"><b>Featured</b></a>
+                                <a class="dropdown-item" href="#">New Arrivals</a>
+                                <a class="dropdown-item" href="#">Popular</a>
+                                <a class="dropdown-item" href="#">Sale</a>
+                                <a class="dropdown-subject"><b>Shop by Activity</b></a>
+                                <a class="dropdown-item" href="#">Snow</a>
+                                <a class="dropdown-item" href="#">Running</a>
+                                <a class="dropdown-item" href="#">Hiking</a>
+                                <a class="dropdown-item" href="#">Camping</a>
+                            </div>
+                            <div class="column2">
+                                <a class="dropdown-subject"><b>Outerwear</b></a>
+                                <a class="dropdown-item" href="#">Gore-tex Jackets</a>
+                                <a class="dropdown-item" href="#">Rain Jackets</a>
+                                <a class="dropdown-item" href="#">Down Jackets</a>
+                                <a class="dropdown-item" href="#">Base Layers</a>
+                                <a class="dropdown-subject"><b>Base Layers</b></a>
+                                <a class="dropdown-item" href="#">Fleece</a>
+                                <a class="dropdown-item" href="#">SmartWool</a>
+                                <a class="dropdown-item" href="#">Uinta Basic's</a>
+                            </div>
+                            <div class="column3">
+                                <a class="dropdown-subject"><b>Tops</b></a>
+                                <a class="dropdown-item" href="#">Activewear</a>
+                                <a class="dropdown-item" href="#">T-Shirts</a>
+                                <a class="dropdown-item" href="#">Sweatshirts & Hoodies</a>
+                                <a class="dropdown-subject"><b>Bottoms</b></a>
+                                <a class="dropdown-item" href="#">Pants</a>
+                                <a class="dropdown-item" href="#">Sweatpants & Joggers</a>
+                                <a class="dropdown-item" href="#">Shorts</a>
+                                <a class="dropdown-item" href="#">More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <input class="search" id="search" placeholder=" Search..."></input>
             </div>
         </div>
     </header>
     <div class="bodycontainer">
 
-        <div class="floatLeft bannerRow w100" style="width:100%;">
+        <div class="mainbanner" style="width:100%; height: auto; position: relative;">
             <a href="">
-                <img id="desktopHero" alt="Shop winter sports" src="img/banner.jpg" width="100%">
+                <img id="desktopHeroOverlay" alt="Shop New Years Sale" src="img/BANNER-TOPPER.png" width="100%">
             </a>
-        </div>
+        </div>        
 
-        <div class="floatLeft bannerRow w100" style="width:100%;margin-top: -1000px; z-index: 2;">
-            <a href="">
-                <img id="desktopHero" alt="Shop winter sports" src="img/BANNER-TOPPER.png" width="100%">
-            </a>
-        </div>
-
-        <div class="bestsellers" style="margin-left: 20vw; margin-right: 20vw; margin-top: -30px;">
+        <div class="bestsellers" style="margin-left: 20vw; margin-right: 20vw;">
             <h1>shop the sale</h1>
         </div>
 
@@ -111,7 +327,7 @@
             </div>
         </div>
 
-        <div class="whitespace" style="background-color: #e8e8e8; margin-top: -400px; height: 440px;"></div>
+        <div class="whitespace" style="background-color: #e8e8e8; margin-top: -25vh; height: 240px;"></div>
 
         <div class="floatLeft bannerRow w100" style="width:100%;">
             <a href="">
@@ -412,6 +628,37 @@
                 }
             });
 
+
+        </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var dropdowns = document.querySelectorAll(".dropdown");
+
+                dropdowns.forEach(function (dropdown) {
+                    var timeoutShow, timeoutHide;
+
+                    dropdown.addEventListener("mouseenter", function () {
+                        clearTimeout(timeoutHide);
+                        timeoutShow = setTimeout(function () {
+                            dropdown.classList.add("show");
+                        }, 200); // Adjust the delay time to show the dropdown (in milliseconds)
+                    });
+
+                    dropdown.addEventListener("mouseleave", function () {
+                        clearTimeout(timeoutShow);
+                        timeoutHide = setTimeout(function () {
+                            dropdown.classList.remove("show");
+                        }, 200); // Adjust the delay time to hide the dropdown (in milliseconds)
+                    });
+                });
+            });
+        </script>
+        <script>
+            window.addEventListener('scroll', function() {
+    const scrollPosition = window.scrollY;
+    const parallaxElement = document.querySelector('.mainbanner');
+    parallaxElement.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
+});
 
         </script>
     </footer>
