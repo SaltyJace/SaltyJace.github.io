@@ -146,12 +146,12 @@ h1 {
   font-family: 'Lexend Zetta', sans-serif;
 }
 
-.item {
+.caritem {
   border-radius: 5px;
   background-color: #e8e8e8;
 }
 
-.item img {
+.caritem img {
   padding: 15px;
 }
 
@@ -159,14 +159,14 @@ h1 {
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 5px;
-  height: 80px;
+  height: 100px;
 }
 
-.item h2 {
+.caritem h2 {
   font-size: large;
 }
 
-.item p {
+.caritem p {
   font-size: medium;
   font-weight: 300;
 }
@@ -314,4 +314,45 @@ h1 {
 .desktopHeroOverlay {
   transform: translate(-1000px, 400px);
   position: absolute;
+}
+.powbanner{
+  background-image: url(img/shredszn.jpg);
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 767px){
+  .navcontainer .result h2, .result h1, .result p .options-container .bottomcontent{
+    margin-left: 0%;
+    margin-right: 0%;
+
+  }
+
+  .search {
+    display: none;
+  }
+
+  .options-container {
+    padding-top: 12px;
+    min-width: 10vw;
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  .option img {
+    width: 14vw;
+    height: 14vw;
+    transition: .5s ease;
+  }
+  .option img:hover {
+    cursor: pointer;
+    width: auto;
+    height: auto;
+  }
+  .powbanner{
+    background-image: url(img/shredsznmobile.png);
+  }
+
 }
