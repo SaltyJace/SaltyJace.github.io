@@ -165,6 +165,8 @@ h1 {
 
 .caritem img {
   padding: 15px;
+  height: 12vw;
+  height: 12vw;
 }
 
 .itemcontent {
@@ -343,7 +345,7 @@ h1 {
   height: 33vh;
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 1000px){
   html{
     --mainbanner-img: url(/img/bannermobile.png);
     --pow-img: url(/img/shredsznmobile2.png);
@@ -397,8 +399,8 @@ h1 {
     position: relative;
     height: 70vh;
   }
-  .desktopHeroOverlay {
-    display: none;
+  .mainbanner img {
+    display: none !important;
 }
 .powbanner{
   height: 1500px;
