@@ -11,6 +11,10 @@
 html, body {
   background-color: #DAD7CD;
 }
+html{
+  --mainbanner-img: url(/img/banner.jpg);
+  --pow-img: url(/img/shredszn.jpg);
+}
 
 .navcontainercolor, .navfootercolor {
   background-color: #443A5A;
@@ -43,12 +47,20 @@ html, body {
   margin-bottom: 0;
   width: fit-content;
 }
-
+.triobanners{
+  margin-top: 15vh;
+  width: 60vw;
+  margin-left: 20%;
+  margin-right: 20%;
+}
 .bodycontainer {
   background-color: #DAD7CD;
 }
 .mainbanner{
   position: absolute;
+  width:100%;
+  height: 600px;
+  position: relative;
 }
 
 .result {
@@ -263,7 +275,6 @@ h1 {
   margin-left: 20%;
   margin-right: 20%;
 }
-
 .search {
   height: 35px;
   margin-top: auto;
@@ -291,40 +302,56 @@ h1 {
 .hikeDropdown{
   grid-column: 2;
 }
-
-.overlay{
-  z-index: 300;
-  mask:url("/img/cityplace7.png");
-  mask-size: cover;
-  -webkit-mask:url("/img/cityplace7.png");
-  -webkit-mask-size:cover;
-  -webkit-mask-position: center top;
-  width:100%;
-  height:100%;
-}
-
 .mainbanner {
-  background-image: url("/img/banner.jpg");
+  background: var(--mainbanner-img);
   background-size: cover;
   background-position: center top;
   position: relative;
-  height: 600px; /* Adjust the height as needed */
+  height: 1000px;
 }
 
 .desktopHeroOverlay {
   transform: translate(-1000px, 400px);
   position: absolute;
 }
-.powbanner{
-  background-image: url(img/shredszn.jpg);
+.powcontainer{
   width: 100%;
-  height: auto;
+  height: 1200px;
+}
+.powbanner{
+  background-image: var(--pow-img);
+  background-size: cover;
+  background-position: center top;
+  position: relative;
+  width: 100%;
+  height: 1200px;
+}
+.bestsellers{
+  margin-left: 20vw;
+  margin-right: 20vw;
+  margin-top: 50px;
+}
+.triorows{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 10px;
+}
+.whitespace{
+  background-color: #e8e8e8;
+  margin-top: -31vh;
+  height: 33vh;
 }
 
 @media screen and (max-width: 767px){
-  .navcontainer .result h2, .result h1, .result p .options-container .bottomcontent{
-    margin-left: 0%;
-    margin-right: 0%;
+  html{
+    --mainbanner-img: url(/img/bannermobile.png);
+    --pow-img: url(/img/shredsznmobile2.png);
+  }
+
+  .navcontainer .result h2, .result h1, .result p .options-container .bottomcontent .bestsellers{
+    margin-left: 2.5%;
+    margin-right: 2.5%;
 
   }
 
@@ -351,8 +378,52 @@ h1 {
     width: auto;
     height: auto;
   }
-  .powbanner{
-    background-image: url(img/shredsznmobile.png);
+  .triobanners{
+    margin-top: 15vh;
+    width: 95vw;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
   }
+  .triorows{
+    width: 100%;
+    display: grid;
+    grid-template-columns:none;
+    grid-template-rows: repeat(3,1fr);
+  }
+  .mainbanner {
+    background-image: url("/img/bannermobile.png");
+    background-size: cover;
+    background-position: center top;
+    position: relative;
+    height: 70vh;
+  }
+  .desktopHeroOverlay {
+    display: none;
+}
+.powbanner{
+  height: 1500px;
+}
+.powcontainer{
+  height: 1500px;
+}
+.whitespace{
+  background-color: #e8e8e8;
+  margin-top: -60vh;
+  height: 1300px;
+}
 
+.bottomcontent {
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  display: grid;
+  width: 95%;
+  max-width: 95%;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 10px;
+}
+
+.bottomcontent img {
+  height: 32vw;
+  padding: 20px;
+}
 }
