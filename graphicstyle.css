@@ -1,0 +1,30 @@
+
+body {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .image-container {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .image-container img {
+    width: 100%;
+    background-color: gray;
+    object-fit: cover;
+    text-align: center;
+    font-size: 120px;
+    color: white;
+  }
+  
+  .margin {
+    width: 85%;
+  }
+  
