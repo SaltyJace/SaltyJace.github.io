@@ -27,4 +27,13 @@ body {
   .margin {
     width: 85%;
   }
-  
+  .assetgrid{
+    border: 1px red solid;
+    width: 1000px;
+    height: 1000px;
+    margin: auto;
+  }
+  .assetgrid img{
+    max-width: 200px;
+    max-height: 200px;
+  }
