@@ -1,53 +1,77 @@
 <html>
-  <head>
-      <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0WXGD7876G"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
 
-  gtag('config', 'G-0WXGD7876G');
-</script>
-
-    <title>Video</title>
-    <link rel="stylesheet" href="videostyle.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  </head>
-
-  <body>
-
-      <div class="videoproj">
-        <h1>Video Projects</h1>
-      </div>
-
-
-      <div class="vidcolumn">
-        <div class="player">
-          <iframe src="https://player.vimeo.com/video/779196600?h=f11493a818" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-        </div>
-      </div>
-
-      <div class="vidcolumn">
-        <div class="player">
-          <iframe src="https://player.vimeo.com/video/870422443?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-        </div>
-      </div>
-
-  </body>
-
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WXGD7876G"></script>
   <script>
-            var toggle = document.getElementById("theme-toggle");
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-if (storedTheme)
+    gtag('config', 'G-0WXGD7876G');
+  </script>
+
+  <title>Video</title>
+  <link rel="stylesheet" href="videostyle.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="videoproj">
+    <h1>Cinematography Projects</h1>
+  </div>
+
+
+  <div class="vidcolumn">
+    <div class="player">
+      <iframe src="https://player.vimeo.com/video/779196600?h=f11493a818" width="1280" height="720" frameborder="0"
+        allow="autoplay; fullscreen" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="vidcolumn">
+    <div class="player">
+      <iframe src="https://player.vimeo.com/video/870422443?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+        width="1280" height="720" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="videoproj">
+    <h1>Editing Projects</h1>
+  </div>  
+
+  <div class="vidcolumn">
+    <div class="player">
+      <iframe src="https://player.vimeo.com/video/926101158?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+        width="1280" height="720" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="vidcolumn">
+    <div class="player">
+      <iframe src="https://player.vimeo.com/video/926104957?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+        width="1280" height="720" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    </div>
+  </div>
+
+</body>
+
+<script>
+  var toggle = document.getElementById("theme-toggle");
+
+  var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  if (storedTheme)
     document.documentElement.setAttribute('data-theme', storedTheme)
 
-  </script>
+</script>
