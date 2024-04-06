@@ -1,3 +1,6 @@
+html{
+  --mainbanner-img: url(/img/banner.jpg);
+}
 
 body {
     margin: 0;
@@ -17,7 +20,6 @@ body {
   
   .image-container img {
     width: 100%;
-    background-color: gray;
     object-fit: cover;
     text-align: center;
     font-size: 120px;
@@ -27,13 +29,49 @@ body {
   .margin {
     width: 85%;
   }
-  .assetgrid{
-    border: 1px red solid;
-    width: 1000px;
-    height: 1000px;
-    margin: auto;
+  .mainbanner{
+    position: absolute;
+    background: var(--mainbanner-img);
+    background-size: cover;
+    background-position: center top;
+    position: relative;
   }
-  .assetgrid img{
-    max-width: 200px;
-    max-height: 200px;
+
+
+  .aspect-ratio-200x100{
+    aspect-ratio: 2 / 1;
+     max-width: 49.75%;
+    height: auto
+  }
+  .aspect-ratio-200x300{
+    aspect-ratio: 2 / 3;
+    max-width: 33%; 
+    height: auto;
+  }
+  .aspect-ratio-1632x200{
+    aspect-ratio: 8 / 1;
+  }
+
+
+  @media screen and (max-width: 951px){
+    html{
+      --mainbanner-img: url(/img/bannermobile.png);
+    }
+    .aspect-ratio-200x100{
+      aspect-ratio: 2 / 1;
+      max-width: 100%;
+      height: auto
+    }
+    .aspect-ratio-200x300{
+      aspect-ratio: 2 / 3;
+      max-width: 100%; 
+      height: auto;
+    }
+    .aspect-ratio-1632x200{
+      aspect-ratio: 8 / 1;
+    }
+    .image-container {
+      display: block;
+    }
+
   }
