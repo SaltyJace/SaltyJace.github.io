@@ -87,4 +87,7 @@ body {
 .albionbanner{
   aspect-ratio: 2 / 1;
 }
+.desktopHeroOverlay{
+  display: none;
+}
   }
