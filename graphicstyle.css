@@ -1,5 +1,6 @@
 html{
   --mainbanner-img: url(/img/banner.jpg);
+  --albionbanner-img: url(img/Graphics/albionlong--3-1.jpg);
 }
 
 body {
@@ -36,7 +37,16 @@ body {
     background-position: center top;
     position: relative;
   }
-
+.albionbanner{
+    position: absolute;
+    background: var(--albionbanner-img);
+    background-size: cover;
+    background-position: center top;
+    position: relative;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 1;
+}
 
   .aspect-ratio-200x100{
     aspect-ratio: 2 / 1;
@@ -53,9 +63,10 @@ body {
   }
 
 
-  @media screen and (max-width: 951px){
+  @media screen and (max-width: 1000px){
     html{
       --mainbanner-img: url(/img/bannermobile.png);
+      --albionbanner-img: url(img/Graphics/albion2--2-1.jpg);
     }
     .aspect-ratio-200x100{
       aspect-ratio: 2 / 1;
@@ -73,5 +84,7 @@ body {
     .image-container {
       display: block;
     }
-
+.albionbanner{
+  aspect-ratio: 2 / 1;
+}
   }
